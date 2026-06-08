@@ -487,7 +487,7 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbzFgnrmF0S4cSZfxI3MQCstsylTDBVXF4PHcD-jcvGC6HfHldG7BP55UOH6jp1vv2WF/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbz8XkJZzUFoFXqfydtNJtm98PAw8MLAuNTsKuzJH-QdEeZqhIGJIAtQdA9oTJi4QbAc/exec';
 
 // ── DADOS ──
 var ENT={
@@ -560,7 +560,13 @@ function irSub(sec, key, ico, nom){
   pilha.push(pagAtual); pagAtual='sub';
   document.getElementById('sub-ico').textContent=ico;
   document.getElementById('sub-nom').textContent=nom;
-  renderSub(sec+'-'+key);
+  var chave=sec+'-'+key;
+  // carregar do Sheets se ainda não carregou
+  if(!ITEMS[chave]){
+    ITEMS[chave]=[];
+    carregarSubSec(chave);
+  }
+  renderSub(chave);
   mostrar('p-sub', ico+' '+nom);
   document.getElementById('btnAdd').classList.add('vis');
 }
@@ -785,22 +791,39 @@ function salvarItem(){
   if(!txt){msg.textContent='Digite o conteúdo.';msg.className='mmsg er';return;}
   btn.disabled=true; btn.textContent='Salvando…';
 
-  var chave=subAtual?(subAtual.sec+'-'+subAtual.key):(pagAtual==='preceitos'?'prec':'cal');
+  var chave=subAtual?(subAtual.sec+'-'+subAtual.key):(pagAtual==='calendario'?'cal':'prec');
   if(!ITEMS[chave]) ITEMS[chave]=[];
 
   if(modoEdit&&editIdx_>=0){
-    ITEMS[chave][editIdx_]={titulo:tit,texto:txt};
+    var itemAtual=ITEMS[chave][editIdx_];
+    ITEMS[chave][editIdx_]={titulo:tit,texto:txt,index:itemAtual?itemAtual.index:null};
+    if(itemAtual&&itemAtual.index&&String(itemAtual.index).indexOf('_i')!==0){
+      editarItemSheet(chave,itemAtual.index,tit,txt);
+    }
+    if(pagAtual==='sub') renderSub(chave);
+    else if(pagAtual==='calendario') renderStatico('lista-cal','cal');
+    msg.textContent='✓ Atualizado!'; msg.className='mmsg ok';
+    btn.textContent='Salvo ✓';
+    setTimeout(fecharMItem,1200);
   } else {
-    ITEMS[chave].push({titulo:tit,texto:txt});
+    salvarItemSheet(chave,tit,txt,function(){
+      var fi='_i'+Date.now();
+      ITEMS[chave].push({titulo:tit,texto:txt,index:fi});
+      if(pagAtual==='sub') renderSub(chave);
+      else if(pagAtual==='calendario') renderStatico('lista-cal','cal');
+      msg.textContent='✓ Salvo!'; msg.className='mmsg ok';
+      btn.textContent='Salvo ✓';
+      setTimeout(fecharMItem,1200);
+    },function(){
+      var fi='_i'+Date.now();
+      ITEMS[chave].push({titulo:tit,texto:txt,index:fi});
+      if(pagAtual==='sub') renderSub(chave);
+      else if(pagAtual==='calendario') renderStatico('lista-cal','cal');
+      msg.textContent='⚠ Salvo local (sem conexão)'; msg.className='mmsg ok';
+      btn.textContent='Salvo ✓';
+      setTimeout(fecharMItem,1400);
+    });
   }
-
-  if(pagAtual==='sub') renderSub(chave);
-
-  else if(pagAtual==='calendario') renderStatico('lista-cal','cal');
-
-  msg.textContent='✓ Salvo!'; msg.className='mmsg ok';
-  btn.textContent='Salvo ✓';
-  setTimeout(fecharMItem,1200);
 }
 
 function fecharMItem(){document.getElementById('mItem').classList.remove('open');}
@@ -845,9 +868,12 @@ function confirmarDel(){
     }
   } else {
     var chave=delChave_||'';
+    var delItem=ITEMS[chave]?ITEMS[chave][delIdx2_]:null;
     if(ITEMS[chave]) ITEMS[chave].splice(delIdx2_,1);
+    if(delItem&&delItem.index&&String(delItem.index).indexOf('_i')!==0){
+      excluirItemSheet(chave,delItem.index,null,null);
+    }
     if(pagAtual==='sub') renderSub(chave);
-  
     else if(pagAtual==='calendario') renderStatico('lista-cal','cal');
     rmCard(delCard_); fecharMDel();
   }
@@ -872,16 +898,61 @@ function chamarSheet(payload,onOk,onErr){
   .catch(function(e){if(onErr)onErr(e);});
 }
 
+function carregarAba(aba, onOk){
+  fetch(SHEET+'?aba='+aba)
+  .then(function(r){return r.json();})
+  .then(function(rows){ if(onOk) onOk(rows); })
+  .catch(function(){});
+}
+
+// Carregar cantigas do usuário
 function carregarSalvas(){
-  fetch(SHEET).then(function(r){return r.json();})
-  .then(function(rows){
+  carregarAba('cantigas', function(rows){
     rows.forEach(function(row){
       if(!row.entidade||!row.cantiga) return;
       if(!CANT_USER[row.entidade]) CANT_USER[row.entidade]=[];
       CANT_USER[row.entidade].push({cantiga:row.cantiga,index:row.index});
     });
-  }).catch(function(){});
+  });
 }
+
+// Carregar itens de uma sub-seção
+function carregarSubSec(chave){
+  var aba = chave.replace('-','_');
+  carregarAba(aba, function(rows){
+    if(!rows.length) return;
+    if(!ITEMS[chave]) ITEMS[chave]=[];
+    rows.forEach(function(row){
+      if(row.chave===chave){
+        ITEMS[chave].push({titulo:row.titulo,texto:row.texto,index:row.index});
+      }
+    });
+    // se a sub-seção atual já está aberta, re-renderizar
+    if(subAtual && (subAtual.sec+'-'+subAtual.key)===chave){
+      renderSub(chave);
+    }
+    if(pagAtual==='calendario' && chave==='cal') renderStatico('lista-cal','cal');
+  });
+}
+
+// Salvar item genérico no Sheets
+function salvarItemSheet(chave, titulo, texto, onOk, onErr){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'add', aba:aba, chave:chave, titulo:titulo, texto:texto}, onOk, onErr);
+}
+
+// Editar item no Sheets
+function editarItemSheet(chave, row, titulo, texto){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'edit', aba:aba, row:row, titulo:titulo, texto:texto}, null, null);
+}
+
+// Excluir item no Sheets
+function excluirItemSheet(chave, row, onOk, onErr){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'delete', aba:aba, row:row}, onOk, onErr);
+}
+
 carregarSalvas();
 </script>
 </body>
@@ -1148,7 +1219,7 @@ carregarSalvas();
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbzFgnrmF0S4cSZfxI3MQCstsylTDBVXF4PHcD-jcvGC6HfHldG7BP55UOH6jp1vv2WF/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbz8XkJZzUFoFXqfydtNJtm98PAw8MLAuNTsKuzJH-QdEeZqhIGJIAtQdA9oTJi4QbAc/exec';
 
 // ── DADOS ──
 var ENT={
@@ -1629,7 +1700,7 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbzFgnrmF0S4cSZfxI3MQCstsylTDBVXF4PHcD-jcvGC6HfHldG7BP55UOH6jp1vv2WF/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbz8XkJZzUFoFXqfydtNJtm98PAw8MLAuNTsKuzJH-QdEeZqhIGJIAtQdA9oTJi4QbAc/exec';
 
 // ── DADOS ──
 var ENT={
@@ -1702,7 +1773,13 @@ function irSub(sec, key, ico, nom){
   pilha.push(pagAtual); pagAtual='sub';
   document.getElementById('sub-ico').textContent=ico;
   document.getElementById('sub-nom').textContent=nom;
-  renderSub(sec+'-'+key);
+  var chave=sec+'-'+key;
+  // carregar do Sheets se ainda não carregou
+  if(!ITEMS[chave]){
+    ITEMS[chave]=[];
+    carregarSubSec(chave);
+  }
+  renderSub(chave);
   mostrar('p-sub', ico+' '+nom);
   document.getElementById('btnAdd').classList.add('vis');
 }
@@ -2014,16 +2091,61 @@ function chamarSheet(payload,onOk,onErr){
   .catch(function(e){if(onErr)onErr(e);});
 }
 
+function carregarAba(aba, onOk){
+  fetch(SHEET+'?aba='+aba)
+  .then(function(r){return r.json();})
+  .then(function(rows){ if(onOk) onOk(rows); })
+  .catch(function(){});
+}
+
+// Carregar cantigas do usuário
 function carregarSalvas(){
-  fetch(SHEET).then(function(r){return r.json();})
-  .then(function(rows){
+  carregarAba('cantigas', function(rows){
     rows.forEach(function(row){
       if(!row.entidade||!row.cantiga) return;
       if(!CANT_USER[row.entidade]) CANT_USER[row.entidade]=[];
       CANT_USER[row.entidade].push({cantiga:row.cantiga,index:row.index});
     });
-  }).catch(function(){});
+  });
 }
+
+// Carregar itens de uma sub-seção
+function carregarSubSec(chave){
+  var aba = chave.replace('-','_');
+  carregarAba(aba, function(rows){
+    if(!rows.length) return;
+    if(!ITEMS[chave]) ITEMS[chave]=[];
+    rows.forEach(function(row){
+      if(row.chave===chave){
+        ITEMS[chave].push({titulo:row.titulo,texto:row.texto,index:row.index});
+      }
+    });
+    // se a sub-seção atual já está aberta, re-renderizar
+    if(subAtual && (subAtual.sec+'-'+subAtual.key)===chave){
+      renderSub(chave);
+    }
+    if(pagAtual==='calendario' && chave==='cal') renderStatico('lista-cal','cal');
+  });
+}
+
+// Salvar item genérico no Sheets
+function salvarItemSheet(chave, titulo, texto, onOk, onErr){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'add', aba:aba, chave:chave, titulo:titulo, texto:texto}, onOk, onErr);
+}
+
+// Editar item no Sheets
+function editarItemSheet(chave, row, titulo, texto){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'edit', aba:aba, row:row, titulo:titulo, texto:texto}, null, null);
+}
+
+// Excluir item no Sheets
+function excluirItemSheet(chave, row, onOk, onErr){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'delete', aba:aba, row:row}, onOk, onErr);
+}
+
 carregarSalvas();
 </script>
 </body>
@@ -2290,7 +2412,7 @@ carregarSalvas();
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbzFgnrmF0S4cSZfxI3MQCstsylTDBVXF4PHcD-jcvGC6HfHldG7BP55UOH6jp1vv2WF/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbz8XkJZzUFoFXqfydtNJtm98PAw8MLAuNTsKuzJH-QdEeZqhIGJIAtQdA9oTJi4QbAc/exec';
 
 // ── DADOS ──
 var ENT={
@@ -2363,7 +2485,13 @@ function irSub(sec, key, ico, nom){
   pilha.push(pagAtual); pagAtual='sub';
   document.getElementById('sub-ico').textContent=ico;
   document.getElementById('sub-nom').textContent=nom;
-  renderSub(sec+'-'+key);
+  var chave=sec+'-'+key;
+  // carregar do Sheets se ainda não carregou
+  if(!ITEMS[chave]){
+    ITEMS[chave]=[];
+    carregarSubSec(chave);
+  }
+  renderSub(chave);
   mostrar('p-sub', ico+' '+nom);
   document.getElementById('btnAdd').classList.add('vis');
 }
@@ -2675,16 +2803,61 @@ function chamarSheet(payload,onOk,onErr){
   .catch(function(e){if(onErr)onErr(e);});
 }
 
+function carregarAba(aba, onOk){
+  fetch(SHEET+'?aba='+aba)
+  .then(function(r){return r.json();})
+  .then(function(rows){ if(onOk) onOk(rows); })
+  .catch(function(){});
+}
+
+// Carregar cantigas do usuário
 function carregarSalvas(){
-  fetch(SHEET).then(function(r){return r.json();})
-  .then(function(rows){
+  carregarAba('cantigas', function(rows){
     rows.forEach(function(row){
       if(!row.entidade||!row.cantiga) return;
       if(!CANT_USER[row.entidade]) CANT_USER[row.entidade]=[];
       CANT_USER[row.entidade].push({cantiga:row.cantiga,index:row.index});
     });
-  }).catch(function(){});
+  });
 }
+
+// Carregar itens de uma sub-seção
+function carregarSubSec(chave){
+  var aba = chave.replace('-','_');
+  carregarAba(aba, function(rows){
+    if(!rows.length) return;
+    if(!ITEMS[chave]) ITEMS[chave]=[];
+    rows.forEach(function(row){
+      if(row.chave===chave){
+        ITEMS[chave].push({titulo:row.titulo,texto:row.texto,index:row.index});
+      }
+    });
+    // se a sub-seção atual já está aberta, re-renderizar
+    if(subAtual && (subAtual.sec+'-'+subAtual.key)===chave){
+      renderSub(chave);
+    }
+    if(pagAtual==='calendario' && chave==='cal') renderStatico('lista-cal','cal');
+  });
+}
+
+// Salvar item genérico no Sheets
+function salvarItemSheet(chave, titulo, texto, onOk, onErr){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'add', aba:aba, chave:chave, titulo:titulo, texto:texto}, onOk, onErr);
+}
+
+// Editar item no Sheets
+function editarItemSheet(chave, row, titulo, texto){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'edit', aba:aba, row:row, titulo:titulo, texto:texto}, null, null);
+}
+
+// Excluir item no Sheets
+function excluirItemSheet(chave, row, onOk, onErr){
+  var aba = chave.replace('-','_');
+  chamarSheet({action:'delete', aba:aba, row:row}, onOk, onErr);
+}
+
 carregarSalvas();
 </script>
 </body>
