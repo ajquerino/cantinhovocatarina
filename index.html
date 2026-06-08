@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- saved from url=(0129)file:///C:/Users/queri/AppData/Local/Temp/MicrosoftEdgeDownloads/7022f399-0f5b-4c82-8690-70ae6cc1fa1d/cantinho_vovo_catarina.html -->
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="theme-color" content="#0d1a2e">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <title>Cantinho da Vovó Catarina</title>
-<link href="./Cantinho da Vovó Catarina_files/css2" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0a1628;--bg2:#0f2040;--bg3:#172a50;
@@ -79,7 +79,7 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 .item-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px;}
 .item-title{font-family:'Cinzel',serif;font-size:.82rem;color:var(--accent2);flex:1;}
 .item-acts{display:flex;gap:5px;flex-shrink:0;}
-.item-body{font-size:.88rem;line-height:1.75;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap;}
+.item-body{font-size:.88rem;line-height:1.75;color:var(--text);white-space:pre-wrap;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .item-body.full{display:block;-webkit-line-clamp:unset;}
 
 .btn-sm{background:none;border:1px solid var(--border);border-radius:6px;color:var(--text-dim);font-size:.75rem;padding:4px 8px;cursor:pointer;touch-action:manipulation;min-height:32px;}
@@ -90,7 +90,7 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 .cant-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);opacity:.6;}
 .cant-card:active{background:var(--bg3);}
 .cant-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px;}
-.cant-prev{font-size:.88rem;line-height:1.7;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.cant-prev{font-size:.88rem;line-height:1.7;color:var(--text);white-space:pre-wrap;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
 .badge-o{font-size:.6rem;background:#0a2040;color:var(--accent);border:1px solid var(--border);border-radius:8px;padding:2px 7px;white-space:nowrap;}
 .badge-u{font-size:.6rem;background:#0a2a1a;color:#5ec88a;border:1px solid #1a5a3a;border-radius:8px;padding:2px 7px;white-space:nowrap;}
 
@@ -140,7 +140,7 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 <body>
 
 <div class="topbar">
-  <button class="btn-back" id="btnBack" onclick="voltar()" style="display: none;">←</button>
+  <button class="btn-back" id="btnBack" onclick="voltar()">←</button>
   <div class="top-tit" id="topTit">Cantinho da Vovó Catarina</div>
   <div class="top-r"></div>
 </div>
@@ -154,13 +154,13 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
     <div class="hero-axe">✦ Saravá ✦</div>
   </div>
   <div class="grid2">
-    <div class="card c-cant" onclick="ir(&#39;cantigas&#39;,&#39;🎵 Cantigas&#39;)"><span class="ico">🎵</span><span class="tit">Cantigas</span><span class="sub">Pontos por entidade</span></div>
-    <div class="card c-defu" onclick="ir(&#39;defumacoes&#39;,&#39;🌿 Defumações&#39;)"><span class="ico">🌿</span><span class="tit">Defumações</span><span class="sub">Receitas e rituais</span></div>
-    <div class="card c-prec" onclick="ir(&#39;preceitos&#39;,&#39;📜 Preceitos&#39;)"><span class="ico">📜</span><span class="tit">Preceitos</span><span class="sub">Orientações e cuidados</span></div>
-    <div class="card c-orac" onclick="ir(&#39;oracoes&#39;,&#39;🙏 Orações&#39;)"><span class="ico">🙏</span><span class="tit">Orações</span><span class="sub">Preces e invocações</span></div>
-    <div class="card c-erva" onclick="ir(&#39;ervas&#39;,&#39;🌱 Ervas e Plantas&#39;)"><span class="ico">🌱</span><span class="tit">Ervas e Plantas</span><span class="sub">Usos e propriedades</span></div>
-    <div class="card c-cale" onclick="ir(&#39;calendario&#39;,&#39;📅 Calendário&#39;)"><span class="ico">📅</span><span class="tit">Calendário</span><span class="sub">Dias e festas</span></div>
-    <div class="card c-ofer" onclick="ir(&#39;oferendas&#39;,&#39;🌸 Oferendas&#39;)"><span class="ico">🌸</span><span class="tit">Oferendas</span><span class="sub">Por Orixá e entidade</span></div>
+    <div class="card c-cant" onclick="ir('cantigas','🎵 Cantigas')"><span class="ico">🎵</span><span class="tit">Cantigas</span><span class="sub">Pontos por entidade</span></div>
+    <div class="card c-defu" onclick="ir('defumacoes','🌿 Defumações')"><span class="ico">🌿</span><span class="tit">Defumações</span><span class="sub">Receitas e rituais</span></div>
+    <div class="card c-prec" onclick="ir('preceitos','📜 Preceitos')"><span class="ico">📜</span><span class="tit">Preceitos</span><span class="sub">Orientações e cuidados</span></div>
+    <div class="card c-orac" onclick="ir('oracoes','🙏 Orações')"><span class="ico">🙏</span><span class="tit">Orações</span><span class="sub">Preces e invocações</span></div>
+    <div class="card c-erva" onclick="ir('ervas','🌱 Ervas e Plantas')"><span class="ico">🌱</span><span class="tit">Ervas e Plantas</span><span class="sub">Usos e propriedades</span></div>
+    <div class="card c-cale" onclick="ir('calendario','📅 Calendário')"><span class="ico">📅</span><span class="tit">Calendário</span><span class="sub">Dias e festas</span></div>
+    <div class="card c-ofer" onclick="ir('oferendas','🌸 Oferendas')"><span class="ico">🌸</span><span class="tit">Oferendas</span><span class="sub">Por Orixá e entidade</span></div>
   </div>
 </div>
 
@@ -168,68 +168,42 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 <div class="page" id="p-cantigas">
   <div class="ph"><div class="ph-ico">🎵</div><div class="ph-tit">Cantigas</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irEnt(&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi / Caboclos&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
-    <div class="scard" onclick="irEnt(&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
-    <div class="scard" onclick="irEnt(&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
-    <div class="scard" onclick="irEnt(&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos / Malandros&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
-    <div class="scard" onclick="irEnt(&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu e Pombagira&#39;)"><span class="ico">🔱</span><span class="tit">Exu / Pombagira</span></div>
-    <div class="scard" onclick="irEnt(&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
-    <div class="scard" onclick="irEnt(&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
-    <div class="scard" onclick="irEnt(&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
-    <div class="scard" onclick="irEnt(&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
-    <div class="scard" onclick="irEnt(&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
-    <div class="scard" onclick="irEnt(&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
-    <div class="scard" onclick="irEnt(&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
-    <div class="scard" onclick="irEnt(&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irEnt('oxossi','🌿','Oxóssi / Caboclos')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irEnt('boiadeiros','🐂','Boiadeiros')"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irEnt('pretos','📿','Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irEnt('baianos','🎭','Baianos / Malandros')"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irEnt('exu','🔱','Exu e Pombagira')"><span class="ico">🔱</span><span class="tit">Exu / Pombagira</span></div>
+    <div class="scard" onclick="irEnt('ogum','⚔️','Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irEnt('xango','⚡','Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irEnt('oxum','💛','Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irEnt('iemanja','🌊','Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irEnt('iansa','🌪️','Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irEnt('nana','🪷','Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irEnt('omolu','🌾','Omolu / Obaluaê')"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irEnt('oxala','🕊️','Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
   </div>
 </div>
 
 <!-- ENTIDADE (lista cantigas) -->
 <div class="page" id="p-entidade">
   <div class="ph" id="ent-ph">
-    <div class="ph-ico" id="ent-ico">🌿</div>
-    <div class="ph-tit" id="ent-nom">Oxóssi / Caboclos</div>
+    <div class="ph-ico" id="ent-ico"></div>
+    <div class="ph-tit" id="ent-nom"></div>
   </div>
-  <div class="content" id="ent-lista"><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo da mata virgem, da mata cerrada, lá do juremá (2x)
-Quem manda na mata é Oxóssi, quem manda no céu Oxalá (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ô oke, caboclo, quero ver girar
-Quero ver caboclo de umbanda arriar (2x)
-Quem manda na mata é Oxóssi, Oxóssi é caçador</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Eu vi meu pai assoviar, ele mandou chamar
-Vem de aruanda ê, vem de aruanda ah</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Oxóssi gira, ele gira na macaia (2x)
-Gira, gira no meu terreiro</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ô juremê, ô juremá
-Suas folhas caíram serenas jurema, dentro desse congá (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Estava na beira do rio sem poder atravessar
-Chamei pelos caboclos, caboclos tupinambá (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Que lindo penacho é aquele
-É um lindo penacho de arara (2x)
-Mas vem rompendo a mata virgem, o caboclo Ubirajara</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ubirajara lá na mata ele é o rei
-Ubirajara lá na mata ele é o tata (2x)
-Lá na mata sua flecha zua</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Os caboclos desceram lá do alto da serra
-E traziam no peito uma cobra coral (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Foi numa tarde serena, lá na mata da jurema
-Que ouvi os caboclos bradar… Kiô kiô kiô</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Vestimenta de caboclo é samambaia, é samambaia (2x)
-Saia caboclo, não se atrapalha</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo não tem caminho para caminhar (2x)
-Ele caminha por cima da folha, por baixo da folha</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Lê, lele lere, lere lere lere lerá
-Caboclo Sete Flechas no congá</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ele atirou… ele atirou ninguém viu (2x)
-Seu Mata Virgem quem sabe… aonde a flecha caiu</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Atira, atira, eu atirei, no congá vou atirar (2x)
-Veado na mata é corredor, Oxóssi na mata é caçador</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo roxo da pele morena
-Ele é Oxóssi, caçador lá da Jurema (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Soltei minha cabocla de pena
-Soltei lá na mata, pra ela trabalhar (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Eu vi chover, eu vi relampear
-Mas mesmo assim o céu estava azul
-Samborê, pemba, folha de jurema</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">No meio da mata virgem
-Uma linda cabocla eu vi (2x)
-Com seu saiote feito de pena, é a Jurema</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Auê, auê, meus caboclos auê (4x)
-Caboclo mora na mata, na beira da sapucaia</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo, pega a sua flecha, pega o seu bodoque
-que a jurema lhe chamou</p></div></div>
+  <div class="content" id="ent-lista"></div>
 </div>
 
 <!-- DEFUMAÇÕES sub-abas -->
 <div class="page" id="p-defumacoes">
   <div class="ph"><div class="ph-ico">🌿</div><div class="ph-tit">Defumações</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;limpeza&#39;,&#39;🧹&#39;,&#39;Limpeza e Purificação&#39;)"><span class="ico">🧹</span><span class="tit">Limpeza</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;descarrego&#39;,&#39;⚡&#39;,&#39;Descarrego&#39;)"><span class="ico">⚡</span><span class="tit">Descarrego</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;prosperidade&#39;,&#39;✨&#39;,&#39;Prosperidade&#39;)"><span class="ico">✨</span><span class="tit">Prosperidade</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;amor&#39;,&#39;💛&#39;,&#39;Amor e União&#39;)"><span class="ico">💛</span><span class="tit">Amor e União</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;protecao&#39;,&#39;🛡️&#39;,&#39;Proteção&#39;)"><span class="ico">🛡️</span><span class="tit">Proteção</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;saude&#39;,&#39;💚&#39;,&#39;Saúde e Cura&#39;)"><span class="ico">💚</span><span class="tit">Saúde e Cura</span></div>
-    <div class="scard" onclick="ir(&#39;def-orixas&#39;,&#39;🌟 Defumações por Orixá&#39;)"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
+    <div class="scard" onclick="irSub('def','limpeza','🧹','Limpeza e Purificação')"><span class="ico">🧹</span><span class="tit">Limpeza</span></div>
+    <div class="scard" onclick="irSub('def','descarrego','⚡','Descarrego')"><span class="ico">⚡</span><span class="tit">Descarrego</span></div>
+    <div class="scard" onclick="irSub('def','prosperidade','✨','Prosperidade')"><span class="ico">✨</span><span class="tit">Prosperidade</span></div>
+    <div class="scard" onclick="irSub('def','amor','💛','Amor e União')"><span class="ico">💛</span><span class="tit">Amor e União</span></div>
+    <div class="scard" onclick="irSub('def','protecao','🛡️','Proteção')"><span class="ico">🛡️</span><span class="tit">Proteção</span></div>
+    <div class="scard" onclick="irSub('def','saude','💚','Saúde e Cura')"><span class="ico">💚</span><span class="tit">Saúde e Cura</span></div>
+    <div class="scard" onclick="ir('def-orixas','🌟 Defumações por Orixá')"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
   </div>
 </div>
 
@@ -237,18 +211,18 @@ que a jurema lhe chamou</p></div></div>
 <div class="page" id="p-oracoes">
   <div class="ph"><div class="ph-ico">🙏</div><div class="ph-tit">Orações</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;geral&#39;,&#39;✨&#39;,&#39;Geral&#39;)"><span class="ico">✨</span><span class="tit">Geral</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi / Caboclos&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu / Pombagira&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
-    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub('ora','geral','✨','Geral')"><span class="ico">✨</span><span class="tit">Geral</span></div>
+    <div class="scard" onclick="irSub('ora','oxala','🕊️','Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub('ora','ogum','⚔️','Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub('ora','xango','⚡','Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub('ora','oxum','💛','Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub('ora','iemanja','🌊','Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub('ora','iansa','🌪️','Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub('ora','oxossi','🌿','Oxóssi / Caboclos')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub('ora','pretos','📿','Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub('ora','exu','🔱','Exu / Pombagira')"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub('ora','nana','🪷','Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub('ora','omolu','🌾','Omolu')"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
   </div>
 </div>
 
@@ -256,12 +230,12 @@ que a jurema lhe chamou</p></div></div>
 <div class="page" id="p-ervas">
   <div class="ph"><div class="ph-ico">🌱</div><div class="ph-tit">Ervas e Plantas</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;quentes&#39;,&#39;🔥&#39;,&#39;Ervas Quentes&#39;)"><span class="ico">🔥</span><span class="tit">Quentes</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;frias&#39;,&#39;💧&#39;,&#39;Ervas Frias&#39;)"><span class="ico">💧</span><span class="tit">Frias</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;mornas&#39;,&#39;🌿&#39;,&#39;Ervas Mornas&#39;)"><span class="ico">🌿</span><span class="tit">Mornas</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;aguas&#39;,&#39;🌊&#39;,&#39;Ervas das Águas&#39;)"><span class="ico">🌊</span><span class="tit">Das Águas</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;prosperidade&#39;,&#39;✨&#39;,&#39;Ervas de Prosperidade&#39;)"><span class="ico">✨</span><span class="tit">Prosperidade</span></div>
-    <div class="scard" onclick="ir(&#39;erv-orixas&#39;,&#39;🌟 Ervas por Orixá&#39;)"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
+    <div class="scard" onclick="irSub('erv','quentes','🔥','Ervas Quentes')"><span class="ico">🔥</span><span class="tit">Quentes</span></div>
+    <div class="scard" onclick="irSub('erv','frias','💧','Ervas Frias')"><span class="ico">💧</span><span class="tit">Frias</span></div>
+    <div class="scard" onclick="irSub('erv','mornas','🌿','Ervas Mornas')"><span class="ico">🌿</span><span class="tit">Mornas</span></div>
+    <div class="scard" onclick="irSub('erv','aguas','🌊','Ervas das Águas')"><span class="ico">🌊</span><span class="tit">Das Águas</span></div>
+    <div class="scard" onclick="irSub('erv','prosperidade','✨','Ervas de Prosperidade')"><span class="ico">✨</span><span class="tit">Prosperidade</span></div>
+    <div class="scard" onclick="ir('erv-orixas','🌟 Ervas por Orixá')"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
   </div>
 </div>
 
@@ -269,11 +243,11 @@ que a jurema lhe chamou</p></div></div>
 <div class="page" id="p-preceitos">
   <div class="ph"><div class="ph-ico">📜</div><div class="ph-tit">Preceitos</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;gerais&#39;,&#39;📜&#39;,&#39;Preceitos Gerais&#39;)"><span class="ico">📜</span><span class="tit">Gerais</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;terreiro&#39;,&#39;🏠&#39;,&#39;Do Terreiro&#39;)"><span class="ico">🏠</span><span class="tit">Do Terreiro</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;diasemana&#39;,&#39;📅&#39;,&#39;Dias da Semana&#39;)"><span class="ico">📅</span><span class="tit">Dias da Semana</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;banhos&#39;,&#39;🛁&#39;,&#39;Banhos de Preceito&#39;)"><span class="ico">🛁</span><span class="tit">Banhos</span></div>
-    <div class="scard" onclick="ir(&#39;prec-orixas&#39;,&#39;🌟 Preceitos por Orixá&#39;)"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
+    <div class="scard" onclick="irSub('prec','gerais','📜','Preceitos Gerais')"><span class="ico">📜</span><span class="tit">Gerais</span></div>
+    <div class="scard" onclick="irSub('prec','terreiro','🏠','Do Terreiro')"><span class="ico">🏠</span><span class="tit">Do Terreiro</span></div>
+    <div class="scard" onclick="irSub('prec','diasemana','📅','Dias da Semana')"><span class="ico">📅</span><span class="tit">Dias da Semana</span></div>
+    <div class="scard" onclick="irSub('prec','banhos','🛁','Banhos de Preceito')"><span class="ico">🛁</span><span class="tit">Banhos</span></div>
+    <div class="scard" onclick="ir('prec-orixas','🌟 Preceitos por Orixá')"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
   </div>
 </div>
 
@@ -282,26 +256,26 @@ que a jurema lhe chamou</p></div></div>
 <div class="page" id="p-prec-orixas">
   <div class="ph"><div class="ph-ico">🌟</div><div class="ph-tit">Preceitos por Orixá</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu / Pombagira&#39;)"><span class="ico">🔱</span><span class="tit">Exu / Pombagira</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos / Malandros&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
-    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+    <div class="scard" onclick="irSub('prec','oxala','🕊️','Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub('prec','ogum','⚔️','Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub('prec','oxossi','🌿','Oxóssi')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub('prec','xango','⚡','Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub('prec','oxum','💛','Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub('prec','iemanja','🌊','Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub('prec','iansa','🌪️','Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub('prec','nana','🪷','Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub('prec','omolu','🌾','Omolu / Obaluaê')"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub('prec','oxumare','🌈','Oxumaré')"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub('prec','ossanha','🌱','Ossanha')"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub('prec','oba','🔴','Obá')"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub('prec','ewa','🟡','Ewá')"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub('prec','logun','🎯','Logunedé')"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub('prec','pretos','📿','Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub('prec','caboclos','🏹','Caboclos')"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub('prec','exu','🔱','Exu / Pombagira')"><span class="ico">🔱</span><span class="tit">Exu / Pombagira</span></div>
+    <div class="scard" onclick="irSub('prec','baianos','🎭','Baianos / Malandros')"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub('prec','boiadeiros','🐂','Boiadeiros')"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub('prec','eres','👶','Erês / Ibejis')"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
   </div>
 </div>
 
@@ -316,10 +290,10 @@ que a jurema lhe chamou</p></div></div>
 <!-- SUB-SEÇÃO GENÉRICA -->
 <div class="page" id="p-sub">
   <div class="ph" id="sub-ph">
-    <div class="ph-ico" id="sub-ico">🔥</div>
-    <div class="ph-tit" id="sub-nom">Ervas Quentes</div>
+    <div class="ph-ico" id="sub-ico"></div>
+    <div class="ph-tit" id="sub-nom"></div>
   </div>
-  <div class="content" id="sub-lista"><div class="empty">Nenhum conteúdo ainda.<br>Toque em ＋ para adicionar.</div></div>
+  <div class="content" id="sub-lista"></div>
 </div>
 
 
@@ -328,27 +302,27 @@ que a jurema lhe chamou</p></div></div>
 <div class="page" id="p-def-orixas">
   <div class="ph"><div class="ph-ico">🌿</div><div class="ph-tit">Defumações por Orixá</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;pombagira&#39;,&#39;🌹&#39;,&#39;Pombagira&#39;)"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
-    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+    <div class="scard" onclick="irSub('def','oxala','🕊️','Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub('def','ogum','⚔️','Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub('def','oxossi','🌿','Oxóssi')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub('def','xango','⚡','Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub('def','oxum','💛','Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub('def','iemanja','🌊','Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub('def','iansa','🌪️','Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub('def','nana','🪷','Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub('def','omolu','🌾','Omolu / Obaluaê')"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub('def','oxumare','🌈','Oxumaré')"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub('def','ossanha','🌱','Ossanha')"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub('def','oba','🔴','Obá')"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub('def','ewa','🟡','Ewá')"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub('def','logun','🎯','Logunedé')"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub('def','pretos','📿','Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub('def','caboclos','🏹','Caboclos')"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub('def','exu','🔱','Exu')"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub('def','pombagira','🌹','Pombagira')"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+    <div class="scard" onclick="irSub('def','baianos','🎭','Baianos')"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub('def','boiadeiros','🐂','Boiadeiros')"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub('def','eres','👶','Erês / Ibejis')"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
   </div>
 </div>
 
@@ -356,56 +330,56 @@ que a jurema lhe chamou</p></div></div>
 <div class="page" id="p-erv-orixas">
   <div class="ph"><div class="ph-ico">🌱</div><div class="ph-tit">Ervas por Orixá</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;pombagira&#39;,&#39;🌹&#39;,&#39;Pombagira&#39;)"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
-    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+    <div class="scard" onclick="irSub('erv','oxala','🕊️','Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub('erv','ogum','⚔️','Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub('erv','oxossi','🌿','Oxóssi')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub('erv','xango','⚡','Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub('erv','oxum','💛','Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub('erv','iemanja','🌊','Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub('erv','iansa','🌪️','Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub('erv','nana','🪷','Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub('erv','omolu','🌾','Omolu / Obaluaê')"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub('erv','oxumare','🌈','Oxumaré')"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub('erv','ossanha','🌱','Ossanha')"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub('erv','oba','🔴','Obá')"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub('erv','ewa','🟡','Ewá')"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub('erv','logun','🎯','Logunedé')"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub('erv','pretos','📿','Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub('erv','caboclos','🏹','Caboclos')"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub('erv','exu','🔱','Exu')"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub('erv','pombagira','🌹','Pombagira')"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+    <div class="scard" onclick="irSub('erv','baianos','🎭','Baianos')"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub('erv','boiadeiros','🐂','Boiadeiros')"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub('erv','eres','👶','Erês / Ibejis')"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
   </div>
 </div>
 <!-- OFERENDAS - grade -->
 <div class="page" id="p-oferendas">
   <div class="ph"><div class="ph-ico">🌸</div><div class="ph-tit">Oferendas</div></div>
   <div class="grid3">
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;pombagira&#39;,&#39;🌹&#39;,&#39;Pombagira&#39;)"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos / Malandros&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;marinheiros&#39;,&#39;⚓&#39;,&#39;Marinheiros&#39;)"><span class="ico">⚓</span><span class="tit">Marinheiros</span></div>
-    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ciganos&#39;,&#39;🔮&#39;,&#39;Ciganos&#39;)"><span class="ico">🔮</span><span class="tit">Ciganos</span></div>
+    <div class="scard" onclick="irSub('ofer','oxala','🕊️','Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub('ofer','ogum','⚔️','Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub('ofer','oxossi','🌿','Oxóssi')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub('ofer','xango','⚡','Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub('ofer','oxum','💛','Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub('ofer','iemanja','🌊','Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub('ofer','iansa','🌪️','Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub('ofer','nana','🪷','Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub('ofer','omolu','🌾','Omolu / Obaluaê')"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub('ofer','oxumare','🌈','Oxumaré')"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub('ofer','ossanha','🌱','Ossanha')"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub('ofer','oba','🔴','Obá')"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub('ofer','ewa','🟡','Ewá')"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub('ofer','logun','🎯','Logunedé')"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub('ofer','pretos','📿','Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub('ofer','caboclos','🏹','Caboclos')"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub('ofer','exu','🔱','Exu')"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub('ofer','pombagira','🌹','Pombagira')"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+    <div class="scard" onclick="irSub('ofer','baianos','🎭','Baianos / Malandros')"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub('ofer','boiadeiros','🐂','Boiadeiros')"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub('ofer','eres','👶','Erês / Ibejis')"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+    <div class="scard" onclick="irSub('ofer','marinheiros','⚓','Marinheiros')"><span class="ico">⚓</span><span class="tit">Marinheiros</span></div>
+    <div class="scard" onclick="irSub('ofer','ciganos','🔮','Ciganos')"><span class="ico">🔮</span><span class="tit">Ciganos</span></div>
   </div>
 </div>
 
@@ -422,10 +396,10 @@ que a jurema lhe chamou</p></div></div>
 </div>
 
 <!-- BOTÃO + -->
-<button id="btnAdd" onclick="abrirAdd()" class="">＋</button>
+<button id="btnAdd" onclick="abrirAdd()">＋</button>
 
 <!-- MODAL ADD/EDIT CANTIGA -->
-<div class="mov" id="mCant" onclick="if(event.target.id===&#39;mCant&#39;)fecharMCant()">
+<div class="mov" id="mCant" onclick="if(event.target.id==='mCant')fecharMCant()">
   <div class="modal">
     <h2 id="mCantTit">✦ Adicionar Cantiga</h2>
     <label>Entidade</label>
@@ -455,7 +429,7 @@ que a jurema lhe chamou</p></div></div>
 </div>
 
 <!-- MODAL ADD/EDIT ITEM GENÉRICO -->
-<div class="mov" id="mItem" onclick="if(event.target.id===&#39;mItem&#39;)fecharMItem()">
+<div class="mov" id="mItem" onclick="if(event.target.id==='mItem')fecharMItem()">
   <div class="modal">
     <h2 id="mItemTit">✦ Adicionar</h2>
     <label>Título</label>
@@ -471,7 +445,7 @@ que a jurema lhe chamou</p></div></div>
 </div>
 
 <!-- MODAL DEL -->
-<div class="mov" id="mDel" onclick="if(event.target.id===&#39;mDel&#39;)fecharMDel()">
+<div class="mov" id="mDel" onclick="if(event.target.id==='mDel')fecharMDel()">
   <div class="modal-d">
     <h2>Excluir</h2>
     <p>Tem certeza que quer <strong>excluir</strong> este item?</p>
@@ -504,19 +478,19 @@ var ENT={
 };
 
 var CANT_ORIG={
-oxossi:["Caboclo da mata virgem, da mata cerrada, lá do juremá (2x)\nQuem manda na mata é Oxóssi, quem manda no céu Oxalá (2x)","Ô oke, caboclo, quero ver girar\nQuero ver caboclo de umbanda arriar (2x)\nQuem manda na mata é Oxóssi, Oxóssi é caçador","Eu vi meu pai assoviar, ele mandou chamar\nVem de aruanda ê, vem de aruanda ah","Oxóssi gira, ele gira na macaia (2x)\nGira, gira no meu terreiro","Ô juremê, ô juremá\nSuas folhas caíram serenas jurema, dentro desse congá (2x)","Estava na beira do rio sem poder atravessar\nChamei pelos caboclos, caboclos tupinambá (2x)","Que lindo penacho é aquele\nÉ um lindo penacho de arara (2x)\nMas vem rompendo a mata virgem, o caboclo Ubirajara","Ubirajara lá na mata ele é o rei\nUbirajara lá na mata ele é o tata (2x)\nLá na mata sua flecha zua","Os caboclos desceram lá do alto da serra\nE traziam no peito uma cobra coral (2x)","Foi numa tarde serena, lá na mata da jurema\nQue ouvi os caboclos bradar… Kiô kiô kiô","Vestimenta de caboclo é samambaia, é samambaia (2x)\nSaia caboclo, não se atrapalha","Caboclo não tem caminho para caminhar (2x)\nEle caminha por cima da folha, por baixo da folha","Lê, lele lere, lere lere lere lerá\nCaboclo Sete Flechas no congá","Ele atirou… ele atirou ninguém viu (2x)\nSeu Mata Virgem quem sabe… aonde a flecha caiu","Atira, atira, eu atirei, no congá vou atirar (2x)\nVeado na mata é corredor, Oxóssi na mata é caçador","Caboclo roxo da pele morena\nEle é Oxóssi, caçador lá da Jurema (2x)","Soltei minha cabocla de pena\nSoltei lá na mata, pra ela trabalhar (2x)","Eu vi chover, eu vi relampear\nMas mesmo assim o céu estava azul\nSamborê, pemba, folha de jurema","No meio da mata virgem\nUma linda cabocla eu vi (2x)\nCom seu saiote feito de pena, é a Jurema","Auê, auê, meus caboclos auê (4x)\nCaboclo mora na mata, na beira da sapucaia","Caboclo, pega a sua flecha, pega o seu bodoque\nque a jurema lhe chamou"],
-boiadeiros:["Seu boiadeiro por aqui choveu (2x)\nChoveu, choveu, relampiou\nFoi tanta água que meu boi nadou","Foi nesse passo que eu saí da minha aldeia (2x)\nMontado em meu cavalo, com meu chapéu de lado","Pedrinha miudinha, pedrinha de Aruanda, ê\nLajedo tão grande, tão grande de Aruanda","Quando matar o boi, o mocotó é meu (2x)\nSó assim ele me paga a carreira que me deu","Boa noite, meus senhores (2x)\nDai-me licença para um cavaleiro\nEu moro em mata cerrada","Eu acendi uma vela por detrás da bananeira\nde repente pegou fogo e virou uma fogueira (2x)"],
-pretos:["Lá vem vovó descendo a serra com sua sacola\nCom seu rosário, seu patuá, ela vem de Angola (2x)","Preto velho tá cansado de tanto trabalhar\nPreto velho tá quebrado de tanto curimbar (2x)","Adorei as almas e as almas me atenderam (2x)\nEram as santas almas lá do cruzeiro","Vovô não gosta de casca de coco no terreiro (2x)\nCasca de coco faz lembrar do cativeiro","Fio, se suncê precisar, é só pensar na vovó\nQue ela vem te ajudar (2x)","Vovó Catarina chegou\nTrazendo a proteção (2x)\nEstenda sua bandeira, vovó\nE salve a sua nação","Saravá pra vovó Catarina que é dona da gira no meu terreiro\nSaravá pra vovó Catarina e pra todas as almas do cativeiro (2x)","Menino Jesus de Praga, ah quem lhe deu essa toalha branca (2x)\nFoi a baiana do engenho, é pra vovó Maria Conga","Pai Joaquim, ê ê, pai Joaquim ê ah\nPai Joaquim é quem vem de Angola","Um navio negreiro que vem beirando o mar\nTrazendo os africanos para trabalhar (2x)","Senhora do Rosário, foi quem me trouxe aqui (2x)\nA água do mar é santa, eu vi, eu vi","A sineta do céu bateu, Oxalá já diz que é hora (2x)\nEu vou, eu vou, eu vou, Fica com Deus e Nossa Senhora"],
-baianos:["Baiano é povo bom, povo trabalhador (2x)\nQuem mexe com baiano mexe com Nosso Senhor","Baiano bom é o que sabe trabalhar (2x)\nBaiano bom é o que sobe no coqueiro","Olha a flor da laranjeira (alô Bahia)\nCheira mais que aroeira (alô Bahia)","Eu fui à Bahia e implorei ao meu Senhor do Bonfim (2x)","Quando eu vim da Bahia, caminhos eu não tinha (2x)","O baiano amarrou o boi lá no pé do araçá (2x)\nSegura, segura, segura","Embala eu, embala eu\nMenininha do Gantois (2x)","Malandro bom traz de lado seu chapéu (2x)\nEle é seu Camisa Preta, ele é o Malandro Miguel","Malandro desce o morro para dar o seu recado\nÉ melhor andar sozinho do que mal acompanhado"],
-exu:["Balança figueira, balança figueira\nBalança figueira, eu quero ver exú cair (2x)","Ô Sete, ô Sete, ô Sete Encruzilhadas\nToma conta e presta conta no romper da madrugada","Eu amei alguém, e esse alguém não ama ninguém (2x)\nEu amei o sol, eu amei a lua\nLá na encruzilhada eu amei Seu Tranca Ruas","Exú Tiriri de umbanda, morador da encruzilhada\nToma conta e presta conta no romper da madrugada","O sino da igrejinha faz belém, bem-blom (2x)\nDeu meia-noite, o galo já cantou","Deu meia-noite, a lua se escondeu\nLá na encruzilhada, dando a sua gargalhada\nTranca Rua apareceu","Quem nesse mundo nunca ouviu dizer\nDe uma cigana que mora naquela estrada","Foi em uma estrada velha\nNa subida de uma serra\nNuma noite de luar\nPombagira da figueira","Cemitério é praça linda, mas ninguém passear (2x)\nNuma catacumba nova, Maria Padilha mora lá","Abre a roda, e deixa a pombagira passar (2x)\nEla tem peito de aço e coração de sabiá","Arreda homem que aí vem mulher (2x)\nEla é a pombo-gira, rainha do cabaré","Ê Caveira\nFirma seu ponto na folha da bananeira, exu Caveira (2x)","Hoje a noite vai ser de magia (2x)\nVou chamar Maria Farrapo pra fazer feitiçaria (2x)","Disseram que iam cortar, que iam cortar a minha língua de trapo (2x)\nMas eu quero ver cortar a língua de Farrapo"],
-ogum:["Eu tenho sete espadas pra me defender\nEu tenho Ogum em minha companhia (2x)","Ogum em seu cavalo corre\nE a sua espada reluz (2x)\nOgum, Ogum megê","Ogum de Lei, não me deixe sofrer tanto assim meu pai (2x)","Se meu pai é Ogum, vencedor de demanda\nEle vem de Aruanda pra saudar filho de umbanda","Quando Ogum partiu pra guerra\nIemanjá chorou (2x)\nQuando Ogum voltou vencedor, Iemanjá cantou","Quem beira rio, beira rio, beira mar\nO que se ganha de Ogum, só Ogum pode tirar","Ogum, cavaleiro da lua\nSó ele navega no mar (2x)"],
-xango:["Estava na pedreira conversando com Xangô\nE foi assim que ele me ensinou (2x)","Dizem que Xangô mora na pedreira\nMas não é lá sua morada verdadeira (2x)","Estão queimando velas\nPara me derrubar\nXangô, meu pai, amarra os inimigos","Ele bradou na aldeia\nBradou na cachoeira\nEm noite de luar\nNo alto da pedreira","Se eu errei, aqui estou, pedindo maleme meu pai Xangô (2x)\nMandai a faísca de um raio pra me iluminar\nSegura a pedra na pedreira, não deixa rolar\nXangô! Kao, meu pai!\nOs seus filhos bambeiam mas não caem (2x)"],
-oxum:["Já chegou, já chegou, já chegou no meu congá (2x)\nJá chegou mamãe Oxum, rainha dos orixás","Eu vi mamãe Oxum na cachoeira\nSentada na beira do rio (2x)\nColhendo lírio, lírio ê","A minha mãe é Oxum\nOra yeye o\nRainha das cachoeiras","Oxum, Oxum me dê\nOxum me dê alguém para amar (2x)\nÓ mamãe Oxum, princesa do mar","Eu vi mamãe Oxum\nCantando na cachoeira\nDançando toda faceira\nTão linda como ela faz\nE quando ela canta\nXangô senta na pedreira\nOxossi lá na ribeira\nNem vento não venta mais\nAie! ieo!\nMinha mãe\nAie! ieo!\nMamãe Oxum\nAie! ieo!\nMoça bonita demais!\nCanta Oxum\nAlivia meu coração\nMe tira da solidão\nMe traz paz"],
-iemanja:["Seu colar é de concha, seu vestido se arrasta na areia\nEla tem cheiro de mar, ela sabe cantar ponto de sereia","Eu fui na beira da praia\nPra ver o balanço do mar (2x)","Mãe d'água, rainha das ondas, sereia do mar\nComo é lindo o canto de Iemanjá","Ô Iemanjá, mas como vem rompendo água (2x)\nSaia da água linda sereia"],
-iansa:["Eram duas ventarolas, duas ventarolas\nVentando no mar (2x)\nUma era Iansã, eparrei\nA outra era Iemanjá","Iansã tem um leque que venta\nPra abanar dia de calor","Olha que o céu clareou\nQuando o dia raiou\nFez o filho pensar\nA mãe do tempo mandou","Meu pai que barulho é esse\nQue vem lá do bambuzal (2x)\nÉ Iansã de Bale, oh dando ilá para guerrear","Ô iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar\nEla chegou bem devagar\nE observou em cada canto desse mundo\nE a fez pensar\nA luz brilhou em seu jacutá\nE anunciou\nPrepare que a guerreira agora vai reinar\nÔ iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar\nO tempo mudou! Fez o céu brilhar\nO Sol e a Lua irradiam energia\nPara renovar\nQue renasça o amor e fortaleça a fé\nPois iansã esta soprando pelo mundo\nUm vendaval de axé!\nÔ iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar"],
-nana:["São flores Nanã, são flores\nSão flores Nanã Buruquê\ndas flores de seu filho Obaluaê","Atraca, atraca que aí vem Nanã, ê ê\nAtraca, atraca que aí vem Nanã","Sarabitu ê, Nanã Buruquê (2x)\nOlha os seus filhos Nanã"],
-omolu:["Meu pai Oxalá é rei, venha me valer (2x)\nE o velho Omolu, atotô Obaluaê","Rolei na terra\nA benção, atotô\nSeu xaxará\nA ferida secou (2x)","Quem vê um velho no caminho peça a benção (2x)\nDeus abençoe, Obaluaê","Ô atotô, atotô meu pai\nMinhas feridas venha curar"],
-oxala:["Meu pai Oxalá é rei, venha me valer (2x)\nOxalá, meu pai\ntem pena de nós, tem dó","No alto das oliveiras\nEu vi uma pombinha a voar (2x)\nÉ uma pombinha mensageira de Oxalá","Oxalá é quem governa o mundo\nSó ele pode governar (Bis)\nQue clareia a Umbanda e todos Orixás (Bis)","Lá no céu abriu uma porta\nOxalá apareceu (Bis)\nVinha com seu manto branco\nDerramando suas graças\nAbençoando os filhos seus (Bis)","No bambuzal de Iansã\nNas campinas de Ogum\nNa pedreira de Xangô Kaô\nOxalá é meu senhor\nNas matas de Oxóssi\nNas aguas de Nanã, Yemanjá\nNo reino de Oxum e Omulu\nOxalá é meu senhor","Oxalá criou a Terra,\nOxalá criou o Mar\nOxalá criou o mundo,\nOnde reinam os Orixás\nA pedra deu pra Xangô,\nMeu pai é rei justiceiro\nAs matas deu para Oxóssi,\nCaçador grande guerreiro\nMar com pescaria farta,\nEle deu pra Yemanjá\nOs rios deu para Oxum\ne os ventos para Oyá!\nGrandes campos de batalha\nDeu para Ogum guerreiro\nCampinas Pai Oxalá deu para seu boiadeiro\nJardim com lindos gramados\nDeu para as crianças brincar\nOxalá criou o mundo,\nOnde reinam os Orixás mas,\n(Refrão)\nO poço deu pra Nanã, a mais velha Orixá\nE o cruzeiro bendito deu pras Almas trabalhar\nFinalmente deu as ruas com estrela e luar\nPara Exus e Pombogiras nossos caminhos guardar!"]
+oxossi:["Caboclo da mata virgem, da mata cerrada, lá do juremá (2x)\nQuem manda na mata é Oxóssi, quem manda no céu Oxalá (2x)","Ô oke, caboclo, quero ver girar\nQuero ver caboclo de umbanda arriar (2x)\nQuem manda na mata é Oxóssi, Oxóssi é caçador, Oxóssi é caçador","Eu vi meu pai assoviar, ele mandou chamar\nVem de aruanda ê, vem de aruanda ah, eu vi meu pai assoviar\nVem de aruanda","Oxóssi gira, ele gira na macaia (2x)\nGira, gira no meu terreiro\nGira, gira na minha umbanda (2x)","Ô juremê, ô juremá\nSuas folhas caíram serenas jurema, dentro desse congá (2x)\nSalve o sol e salve a lua\nSalve são Sebastião\nSalve são Jorge guerreiro, que nos deu a proteção (2x)","Estava na beira do rio sem poder atravessar\nChamei pelos caboclos, caboclos tupinambá (2x)\nTupinambá chamei… chamei e tornei chamar, euá (2x)","Que lindo penacho é aquele\nÉ um lindo penacho de arara (2x)\nMas vem rompendo a mata virgem, vem rompendo a mata virgem, o caboclo Ubirajara","Ubirajara lá na mata ele é o rei\nUbirajara lá na mata ele é o tata (2x)\nLá na mata sua flecha zua (2x)\nZua quando sobe, quando desce ela mata (2x)\nEle é o rei, ele é o tata (2x)","Os caboclos desceram lá do alto da serra\nE traziam no peito uma cobra coral (2x)\nNo seu terreiro, hoje é dia de festa\nVamos saravá seu Sete Flechas (2x)","Foi numa tarde serena, lá na mata da jurema\nQue ouvi os caboclos bradar…\nKiô… kiô kiô kiô kiera\nSua mata estava em festa, saravá seu Sete Flechas que ele é rei da floresta (2x)","Vestimenta de caboclo é samambaia, é samambaia, é samambaia (2x)\nSaia caboclo, não se atrapalha, saia do meio da samambaia (2x)","Caboclo não tem caminho para caminhar (2x)\nEle caminha por cima da folha, por baixo da folha, em todo lugar (2x)\nOkê caboclo","Lê, lele lere, lere lere lere lerá\nLê, lele… caboclo Sete Flechas no congá\nSaravá seu Sete Flechas, ele é o rei da mata\nA sua bodoque atira, o varão da sua flecha mata (2x)","Ele atirou… ele atirou ninguém viu (2x)\nSeu Mata Virgem quem sabe… aonde a flecha caiu (2x)","Atira, atira, eu atirei, no congá vou atirar (2x)\nVeado na mata é corredor, Oxóssi na mata é caçador (2x)","Caboclo roxo da pele morena\nEle é Oxóssi, caçador lá da Jurema (2x)\nEle jurou e tornou a jurar\na ouvir os conselhos que a Jurema sabe dar (2x)","Caboclo 7 flechas nasceu\nNo jardim das oliveiras (2x)\nTrazia amarrado em sua cinta uma coral\nOh sucuri jibóia da aldeia (2x)\nOh sucuri jibóia\nQuando vem beirando o mar (2x)\nOlha como gurgulhou a sua cobra coral (2x)\nOi, segura essa cobra, não deixa ela fugir\nO nome dessa cobra, é cobra sucuri (2x)","Soltei minha cabocla de pena\nSoltei lá na mata, pra ela trabalhar (2x)\nPra ver a força que a jurema tem\nPra ver a força que a jurema dá (2x)","Eu vi chover, eu vi relampear\nMas mesmo assim o céu estava azul\nSamborê, pemba, folha de jurema,\nOxóssi reina de norte a sul (2x)","No meio da mata virgem\nUma linda cabocla eu vi (2x)\nCom seu saiote feito de pena\nÉ a Jurema, filha de tupi (2x)\nJurema, Jurema, Jurema,\nlinda cabocla, filha de tupi\nMas ela vem lá do juremá, vem firmar seu ponto nesse congá (2x)","No meio da mata eu vi\nDois nomes gravados num toco de pau (2x)\nDe um lado era seu Rompe Mato,\ndo outro, seu Cobra Coral (2x)\nNo meio da mata virgem eu vi,\ntodos caboclos falavam a língua tupi-guarani (2x)","Caboclo Arranca Toco é minha luz, é minha guia\nEle é Oxóssi, filho da Virgem Maria (2x)\nA sua luz ilumina o escuro\nNesse terreiro todos os filhos estão seguros (2x)","Mas que caboclo lindo\nQue vem lá da Bahia\nEle traz na mão três ave-marias (2x)\nUma era a lua, a outra o sol\nE a outra a guia do caboclo Girassol (2x)","Quem tem caboclo agora eu quero ver\nFazer seu ponto no azeite de dendê\nEu quero ver os caboclos de aruanda\nTrabalhando na umbanda\nPra quimbanda não vencer (2x)","Cabocla, seu penacho é verde\nSeu penacho é Verde\nÉ da cor do mar (2x)\nÉ a cor da cabocla Jurema\né a cor da cabocla Jurema\nÉ a cor da cabocla Jurema, Juremá (2x)","Auê, auê, meus caboclos auê (4x)\nCaboclo mora na mata\nNa beira da sapucaia\nCaboclo come folha\nE se veste de samambaia\nSalve cabocla Jupira\nSalve cabocla Jurema\nSaravá seu Sete Flechas\nSaravá seu Tira Teima","Caboclo, pega a sua flecha, pega o seu bodoque\nque a jurema lhe chamou\nO galo da campina já cantou\nEles vão embora na paz do Senhor (2x)\nCampos verdes da jurema,\nOnde o pai Oxóssi mora,\nOnde Jesus passou e disse adeus,\nTodos caboclos vão embora (2x)"],
+boiadeiros:["Seu boiadeiro por aqui choveu (2x)\nChoveu, choveu, relampiou\nFoi tanta água que meu boi nadou (2x)","Foi nesse passo que eu saí da minha aldeia (2x)\nMontado em meu cavalo, com meu chapéu de lado (2x)\nQuando eu saí, a minha mãe me abençoava (2x)","Pedrinha miudinha, pedrinha de Aruanda, ê\nLajedo tão grande, tão grande de Aruanda, ê (2x)\nÓ que pedrinha miúda, que pedrinha graúda (2x)\nA pedrinha miúda é a que mais ajuda (2x)","Quando matar o boi, o mocotó é meu (2x)\nSó assim ele me paga a carreira que me deu (2x)","Boa noite, meus senhores (2x)\nDai-me licença para um cavaleiro (2x)\nEu moro em mata cerrada (2x)\nO meu nome é caboclo vaqueiro (2x)","Eu acendi uma vela por detrás da bananeira,\nde repente pegou fogo e virou uma fogueira (2x)\nTá, tá, tá faltando boi (2x)"],
+pretos:["Lá vem vovó descendo a serra com sua sacola\nCom seu rosário, seu patuá, ela vem de Angola (2x)\nEu quero ver, vovó, eu quero ver\nEu quero ver se filho de pemba tem querer (2x)","Preto velho tá cansado de tanto trabalhar\nPreto velho tá quebrado de tanto curimbar (2x)\nCanta ponto e risca pemba que é longa a caminhada\nQuem tem fé tem tudo, quem não tem fé não tem nada (2x)","Adorei as almas e as almas me atenderam (2x)\nEram as santas almas lá do cruzeiro\nEram as santas almas aqui do terreiro","Vovô não gosta de casca de coco no terreiro (2x)\nCasca de coco faz lembrar do cativeiro (2x)","Fio, se suncê precisar, é só pensar na vovó\nQue ela vem te ajudar (2x)\nPensa numa estrada longa, zifio, lá no seu jacutá\nE numa casinha branca, zifio, que a vovó tá lá\nSentada num banquinho tosco, zifio, com seu rosário na mão\nPensa na vovó Maria Redonda fazendo oração (2x)","Vovó Catarina chegou\nTrazendo a proteção (2x)\nEstenda sua bandeira, vovó\nE salve a sua nação (2x)","Saravá pra vovó Catarina que é dona da gira no meu terreiro\nSaravá pra vovó Catarina e pra todas as almas do cativeiro (2x)\nA vovó Catarina do Congo é\nA vovó Catarina vai mostrar\nPra vovó Catarina que os filhos de umbanda vão saravar (2x)","Menino Jesus de Praga, ah quem lhe deu essa toalha branca (2x)\nFoi a baiana do engenho, é pra vovó Maria Conga (2x)\nÊ conga, ê conga, lelê\nÊ conga, ê conga, lalá (2x)","Tudo que eu peço ao vovô ele faz\nTambém o que eu peço a vovó ela faz (2x)\nO que eu quero mais? (4x)\nEle é rei de Aruanda\nMas vovó também manda\nQuando os dois pedem juntos, ninguém me passa pra trás\nO que eu quero mais? (4x)","Pai Joaquim, ê ê, pai Joaquim ê ah\nPai Joaquim é quem vem de Angola\nPai Joaquim é de Angola, angolá (2x)\nPai Joaquim, cadê pai Tomé?\nTá lá na mata colhendo guiné (2x)\nDiga a ele que quando vier,\nsalve o terreiro e não bata o pé (2x)","No tempo do cativeiro, quando o senhor me batia\nEu rezava pra Nossa Senhora meu Deus, como a pancada doía (2x)\nTrabalhava na lavoura\nNo açúcar, no sisal\nNego era chicoteado\nNo velho tronco de pau\nQuando eu cheguei na Bahia\nA capoeira me libertou\nE até hoje ainda me lembro\nDas ordens do meu senhor\nTrabalha nego, nego trabalha\nTrabalha nego pra não apanhar (2x)","Um navio negreiro que vem beirando o mar\nTrazendo os africanos para trabalhar (2x)\nOh saravá povo de Congo, a sua gira é formosa\nem qualquer lugar (2x)","Senhora do Rosário, foi quem me trouxe aqui (2x)\nA água do mar é santa, eu vi, eu vi, eu vi (2x)","A sineta do céu bateu, Oxalá já diz que é hora (2x)\nEu vou, eu vou, eu vou,\nFica com Deus e Nossa Senhora (2x)"],
+baianos:["Baiano é povo bom, povo trabalhador (2x)\nQuem mexe com baiano mexe com Nosso Senhor (2x)","Baiano bom, baiano bom\nBaiano bom é o que sabe trabalhar (2x)\nBaiano bom é o que sobe no coqueiro, fura o coco, bebe a água e deixa o coco no lugar (2x)","Olha a flor da laranjeira (alô Bahia)\nCheira mais que aroeira (alô Bahia)\nA baiana já conhece (alô Bahia)\nO cheiro da laranjeira (alô Bahia)\nVou mandar tirar, vou mandar tirar\nFlor de laranja pro meu benzinho cheirar (2x)","Eu fui à Bahia e implorei ao meu Senhor do Bonfim (2x)\nQue ele me ajudasse a seguir na umbanda meu caminho até o fim (2x)\nMeu Senhor do Bonfim, me ajude, eu preciso de paz e saúde (2x)","Quando eu vim da Bahia, caminhos eu não tinha (2x)\nEm cada encruza que eu passava, uma vela eu acendia\nEm cada igreja que eu entrava, uma prece eu fazia","O baiano amarrou o boi lá no pé do araçá (2x)\nSegura, segura, segura\nSegura baiano, senão ele sai (2x)","Embala eu, embala eu\nMenininha do Gantois\nEmbala pra lá, embala pra cá\nMenininha do Gantois (2x)\nÔ dai-me a tua bênção! Menininha do Gantois...\nLivrai-me dos inimigos! Menininha do Gantois...\nDai-me a sua proteção! Menininha do Gantois...\nE guiai os meus passos\nE por onde eu caminhar\nVire os olhos grandes de cima de mim\nPras ondas do mar!","Quebra coco, arrebenta sapucaia\nVamos todos saravá (2x)\nComo poderei viver, como poderei viver\nSem a sua, sem a sua, sem a sua companhia (2x)","Boa noite moço, vá chamar aquele nego (2x)\nVai ter samba na Bahia, vou sambar o dia inteiro (2x)\nBoa noite moço, diga a ele que eu espero (2x)\nMas se ele demorar, eu juro que eu lhe pego (2x)\nHoje vai ter samba, hoje eu vou sambar\nSó volto noutro dia quando a macumba acabar\nHoje eu vou beber, hoje eu vou tomar\nSó volto noutro dia quando a macumba acabar","Malandro bom traz de lado seu chapéu (2x)\nEle é seu Camisa Preta, ele é o Malandro Miguel (2x)\nGalo cantou três horas da madrugada,\nQuem matou o Camisa Preta foi o cabo da brigada (2x)","Eu falei pra não mexer,\nmas eu falei pra não brincar,\nque os rivais ela retalha (2x)\nÔ, lá no morro, lhe chamam de Maria,\nmas na alta boemia só lhe chamam de Navalha (2x)","Malandro desce o morro para dar o seu recado\nÉ melhor andar sozinho do que mal acompanhado (2x)\nChora viola, a malandragem vai chegar aqui agora (2x)","Vocês tão vendo aquela casa pequenina\nLá no alto da colina, que eu mandei fazer (2x)\nÉ lá que o malandro mora, otário não tem moradia (2x)\nVocês tão vendo aquela gente, viu\nVocês vão ver como é que é\nLá, todo mundo bebe e fuma\nTodo mundo bebe e fuma e pede a bênção a seu Zé (2x)","O morro de santa Teresa está de luto\nPorque Zé Pilintra morreu (2x)\nEle chorava por uma mulher, ele chorava por uma mulher\nEle chorava por uma mulher que não lhe amava (2x)","Se a rádio patrulha chegasse aqui agora seria uma grande vitória, ninguém poderia correr (2x)\nAgora eu quero ver\nQuem é malandro não pode correr (2x)","De manhãzinha quando eu venho descendo o morro\nA nega pensa que eu vou trabalhar (2x)\nEu boto meu baralho no bolso, meu cachecol no pescoço\nE vou pra barão de mauá (2x)\nTrabalhar, trabalhar\nTrabalhar pra quê\nSe eu trabalhar, eu vou morrer (2x)"],
+exu:["Balança figueira, balança figueira\nBalança figueira, eu quero ver exú cair (2x)\nCadê *** que eu não tô vendo ele(a) aqui (2x)\nBalança figueira pra exú cair (2x)","Aê aê, calunga, eu já abri meu casuá (2x)\nEu vou chamar *** pra quimbanda começar (2x)","Ô Sete, ô Sete, ô Sete Encruzilhadas\nToma conta e presta conta no romper da madrugada (2x)","Eu amei alguém, e esse alguém não ama ninguém (2x)\nEu amei o sol, eu amei a lua\nLá na encruzilhada eu amei Seu Tranca Ruas (2x)","Exú Tiriri de umbanda, morador da encruzilhada\nToma conta e presta conta no romper da madrugada (2x)\nTodo mal que aqui entrou, ele entrou e vai sair\nPega ele pelo rabo e dá pra seu Tiriri (2x)","Ninguém pode comigo, eu posso com tudo,\nlá na encruzilhada ele é Exu Veludo (2x)\nExu Veludo é um exu muito lindo\nNa banda ou em qualquer lugar\nExu Veludo bebe o seu marafo,\nExu Veludo sabe o que faz\nQua qua qua qua, qua qua qua qua,\nExu Veludo está na banda, deixa ele curimbar (2x)","O sino da igrejinha faz belém, bem-blom (2x)\nDeu meia-noite, o galo já cantou\nSeu Tranca Rua é dono da gira\nOi corre gira, que Ogum mandou (2x)","Deu meia-noite, a lua se escondeu\nLá na encruzilhada, dando a sua gargalhada\nTranca Rua apareceu\nÊ Laroyê, ê laroyê, ê laroyê,\nÊ mojubá, ê mojubá, ê mojubá,\nEle é Odara, quem tem fé em Tranca Rua\nÉ só pedir que ele dá","Dói, dói, dói, dói, dói,\nUm amor faz sofrer, dois amor faz chorar (2x)\nTe dei amor, te dei carinho,\nTe dei uma rosa, tu me deu espinho\nAmar a um seria bem melhor que amar a dois\nNa força do catimbó\nDói, dói, dói\nQuem é você pra deitar na minha cama\nPapagaio come milho, periquito leva a fama (2x)\nNo tempo em que ela tinha dinheiro\nOs homens queriam lhe amar\nMas hoje o dinheiro acabou, a velhice chegou,\nela se põe a chorar\nDói, dói, dói…","Quem nesse mundo nunca ouviu dizer\nE nesse mundo nunca ouviu falar (2x)\nDe uma cigana que mora naquela estrada\nEla tem sua morada sob o clarão do luar (2x)\nCigana da estrada, moça poderosa\nMe dê proteção e axé, ciganinha formosa (2x)","Foi em uma estrada velha\nNa subida de uma serra\nNuma noite de luar\nPombagira da figueira, moça bela e faceira\nDava o seu gargalhar, porque\nEla é mojubá, ela é mojubá (2x)","Segunda-feira tem samba, samba começa meio-dia\nVamos cantar pra Mulambo, vamos cantar pra Maria\nPra ter caminhos abertos, pra desfazer a magia\nÊ Mulambo, ê Maria (2x)","Quando passar na porta do cemitério, moço\nNão se esqueça de olhar pra trás (2x)\nVocê vai ver uma moça vestida de preto, moço\nEla é Maria, Maria (2x)\nEla é Maria, Maria (2x)","Cemitério é praça linda, mas ninguém passear (2x)\nNuma catacumba nova, Maria Padilha mora lá (2x)\nMora lá, mora lá, Maria Padilha mora lá (2x)","Abre a roda, e deixa a pombagira passar (2x)\nMas ela tem, ela tem peito de aço\nEla tem peito de aço e coração de sabiá (2x)","A minha casa não tem porta e nem janela\nO que é bom o vento traz, o que é ruim o vento leva (2x)\nÔ, ô, a dona da casa chegou (2x)","Arreda homem que aí vem mulher (2x)\nEla é a pombo-gira, rainha do cabaré (2x)","Quando o sol aqui não mais brilhar\nQuando a lua seu clarão refletir\nÉ sinal que está na hora, é ele quem chegou agora\nJá deu meia-noite, Tranca Ruas quem chegou aqui (2x)\nJurou amar alguém na encruzilhada\nJurou fazer o bem de madrugada\nHoje com fé, companheiro e amigo leal,\nQuebra feitiço e também desfaz o mal\nE toda vez que na rua eu caminhar\nOuvi de longe sua voz a ecoar\nTenho certeza, agora não ando sozinho,\nTranca Ruas é dono do meu caminho","Rodeia, rodeia\nRodeia meu Santo Antônio, rodeia (2x)\nSanto Antônio era menino\nBenedito era rapaz\nOi, corre, corre, Santo Antônio\nVamo ver quem corre mais\nSanto Antônio pequenino\nAmansador de burro bravo\nVem amansar meus inimigos\nPra que eu durma sossegado\nSanto Antônio pequenino\nNão me deixe andar sozinho (2x)\nAuê meu santo Antônio, bota Exú no meu caminho (2x)","Foi condenada pela lei da inquisição\nPara ser queimada viva sexta-feira da paixão (2x)\nO padre rezava e o povo acompanhava\nQuanto mais o fogo ardia, ela dava gargalhada (2x)\nO povo queria matar uma mulher\nO padre não concordou e a rezou com muita fé (2x)\nEle era pecador e na fogueira morreu junto\nFoi parar lá no inferno, aquele casal de defunto (2x)\nEle se juntou às cinzas\nGargalhou à luz da lua\nA mulher virou Mulambo\ne o padre, seu Tranca Ruas (2x)","Vinha caminhando a pé\nPara ver se encontrava a minha cigana de fé (2x)\nEla parou e leu minha mão\nE disse toda a verdade\nEu só queria saber aonde mora\nA minha pombagira cigana","Ganhei uma barraca dela\nFoi a cigana quem me deu (2x)\nO que é meu, é da cigana\nMas o que é dela não é meu (2x)\nCiganinha puerê, puerê, puerá (2x)","Madrugada eh, madrugada ah (2x)\nAndando pela estrada\nPassei pela encruzilhada\nSereno não me molhava\nPerfume que exalava\nSilêncio que me assustava\nFoi quando ela apareceu\nTão linda, formosa e bela\nMe olhando dizia assim:\nSou eu, Maria Mulambo\nSenhora de Lúcifer\nQuem me quiser bem, boa sorte\nQuem me quiser mal, boa morte\nEscolha o que tu quiser","Ê Caveira\nFirma seu ponto na folha da bananeira, exu Caveira (2x)","Eu vi um homem sentado debaixo da amendoeira (2x)\nEra osso só, era exu Caveira (2x)","Na calunga grande não tem coveiro não (2x)\nA catacumba onde eu moro é resto de embarcação (2x)\nNo inferno também tem onda, no inferno também tem mãe (2x)\nNo inferno tem uma ilha onde eu vou descarregar (2x)\nSou eu, sou eu quem ronda no mar, sou eu (2x)","Hoje a noite vai ser de magia (2x)\nVou chamar Maria Farrapo pra fazer feitiçaria (2x)\nEssa noite a macumba é pra tu (2x)\nCosturado e amarrado na boca do cururu (2x)\nEssa noite o caldeirão vai ferver (2x)\nVai descer tanto diabo que a terra vai tremer (2x)","Disseram que iam cortar, que iam cortar a minha língua de trapo (2x)\nMas eu quero ver, eu quero ver, eu quero ver cortar a língua de Farrapo"],
+ogum:["Eu tenho sete espadas pra me defender\nEu tenho Ogum em minha companhia (2x)\nOgum é meu pai, Ogum é meu guia\nMas ele vai baixar na fé de Zambi e da Virgem Maria (2x)","Ogum em seu cavalo corre\nE a sua espada reluz (2x)\nOgum, Ogum megê\nSua bandeira cobre os filhos de Jesus, ogunhê (2x)","Ogum de Lei, não me deixe sofrer tanto assim meu pai (2x)\nQuando eu morrer, vou passar pela Aruanda\nSaravá Ogum, saravá filho de umbanda (2x)","Se meu pai é Ogum, vencedor de demanda\nEle vem de Aruanda pra saudar filho de umbanda (2x)\nOgum, Ogum Iara (2x)\nSalve os campos de batalha, salve a sereia do mar\nOgum, Ogum Iara (2x)","Quando Ogum partiu pra guerra,\nIemanjá chorou (2x)\nQuando Ogum voltou vencedor.\nIemanjá cantou (2x)","Quem beira rio, beira rio, beira mar\nO que se ganha de Ogum, só Ogum pode tirar (2x)\nSeu Ogum de Ronda é quem vem girar\nE vem trazendo folha pra descarregar (2x)","Ogum, cavaleiro da lua\nSó ele navega no mar (2x)\nSó ele navega no mar (3x)\nSereia"],
+xango:["Estava na pedreira conversando com Xangô\nE foi assim que ele me ensinou (2x)\nÉ com amor que se pratica a caridade\nÉ com amor","Dizem que Xangô mora na pedreira\nMas não é lá sua morada verdadeira (2x)\nXangô mora numa cidade de luz\nOnde mora Santa Bárbara, Oxumaré e Jesus (2x)","Estão queimando velas\nPara me derrubar\nEu já fiquei doente, meu pai, sem poder andar\nMas hoje estou aqui\nQue é pra saudar Xangô\nE virar essa macumba no peito de quem mandou\nXangô, meu pai\nAmarra os inimigos e dá um nó\nXangô, meu pai\nAmarra na pontinha do cipó (2x)","Ele bradou na aldeia\nBradou na cachoeira\nEm noite de luar\nNo alto da pedreira\nVai fazer justiça\nPra nos ajudar (2x)\nEle bradou na aldeia\nKaô, kaô!\nE aqui vai bradar\nKaô, kaô!\nEle é Xangô da pedreira\nEle nasceu na cachoeira\nLá no juremá (2x)","Se eu errei, aqui estou, pedindo maleme meu pai Xangô (2x)\nMandai a faísca de um raio pra me iluminar\nSegura a pedra na pedreira, não deixa rolar\nXangô! Kao, meu pai!\nOs seus filhos bambeiam mas não caem (2x)"],
+oxum:["Já chegou, já chegou, já chegou no meu congá (2x)\nJá chegou mamãe Oxum, rainha dos orixás (2x)\nMamãe Oxum é um grande orixá\nRainha das cachoeiras, da coroa de Oxalá (2x)","Eu vi mamãe Oxum na cachoeira\nSentada na beira do rio (2x)\nColhendo lírio, lírio ê\nColhendo lírio, lírio ah\nColhendo lírio pra enfeitar nosso congá (2x)\nMas era ela, Nossa Senhora,\nprincesa de Ogum para jurar bandeira (2x)","Nhem-nhem-nhem, Nhem-nhem-nhem, xorodô (2x)\nÉ o mar, é o mar, Fé-fé xorodô...\nXangô andava em guerra\nVencia em toda terra\nTinha ao seu lado Iansã pra lhe ajudar\nOxum era a rainha, na mão direita tinha\nO seu espelho onde vivia a se mirar\nNhem-nhem-nhem, Nhem-nhem-nhem, xorodô (2x)\nÉ o mar, é o mar, Fé-fé xorodô...\nQuando Xangô voltou, o povo celebrou\nTeve uma festa que ninguém mais esqueceu\nTão linda Oxum entrou, que veio o rei Xangô\nE a colocou no trono esquerdo ao lado seu…\nNhem-nhem-nhem, Nhem-nhem-nhem, xorodô (2x)\nÉ o mar, é o mar, Fé-fé xorodô...\nIansã apaixonada cravou a sua espada\nNo lugar vago que era o trono da traição\nChamou um temporal, e no pavor geral,\nCorreu dali gritando a sua maldição…\nNhem-nhem-nhem, Nhem-nhem-nhem, xorodô (2x)\nÉ o mar, é o mar, Fé-fé xorodô...","A minha mãe é Oxum\nOra yeye o\nRainha das cachoeiras\nA deusa da beleza é minha mãe Oxum\nOrixá da natureza (2x)","Oxum, Oxum me dê\nOxum me dê alguém para amar (2x)\nÓ mamãe Oxum, princesa do mar (2x)\nRainha dos ouros, princesa dos orixás (2x)","Eu vi mamãe Oxum\nCantando na cachoeira\nDançando toda faceira\nTão linda como ela faz\nE quando ela canta\nXangô senta na pedreira\nOxossi lá na ribeira\nNem vento não venta mais\nAie! ieo!\nMinha mãe\nAie! ieo!\nMamãe Oxum\nAie! ieo!\nMoça bonita demais!\nCanta Oxum\nAlivia meu coração\nMe tira da solidão\nMe traz paz"],
+iemanja:["Seu colar é de concha, seu vestido se arrasta na areia\nEla tem cheiro de mar, ela sabe cantar ponto de sereia (2x)\nÔ Janaína, deixa eu dormir no seu colo\nÔ Janaína, quando estou feliz eu choro (2x)\nÉ no seu colo que eu mato a minha sede\nQuis te pescar, mas caí na sua rede\nFeita de fio de cabelo emaranhado\nMoro no mar, e hoje sou seu namorado (2x)","Eu fui na beira da praia\nPra ver o balanço do mar (2x)\nEu vi um retrato na areia, me lembrei da sereia\nComecei a chamar (2x)\nÔ Janaína vem ver\nÔ Janaína vem cá,\nReceber suas flores\nQue venho lhe ofertar. (2x)","Mãe d'água, rainha das ondas, sereia do mar\nMãe d'água, seu canto é bonito quando tem luar\nComo é lindo o canto de Iemanjá\nFaz até o pescador chorar\nQuem escuta a mãe d'água cantar\nVai com ela pro fundo do mar (2x)\nIê, Iemanjá, Rainha das ondas, sereia do mar\nRainha das ondas, sereia do mar (2x)","Ô Iemanjá, mas como vem rompendo água (2x)\nComo vem rompendo água no romper da madrugada (2x)\nSaia da água linda sereia\nSaia da água e venha cá brincar na areia\nSaia da água sereia bela\nSaia da água e venha cá brincar com ela"],
+iansa:["Eram duas ventarolas, duas ventarolas\nVentando no mar (2x)\nUma era Iansã, eparrei\nA outra era Iemanjá, odociá (2x)","Iansã tem um leque que venta\nPra abanar dia de calor\nIansã mora na pedreira\nEu quero ver meu pai Xangô (2x)","Olha que o céu clareou\nQuando o dia raiou\nFez o filho pensar\nA mãe do tempo mandou\nA nova era chegou\nAgora vamos plantar\nDo Humaitá Ogum bradou\nSeu Oxóssi atinou,\nIansã vai chegar\nO ogã já firmou\nAtabaque afinou\nAgora vamos cantar\nAh eparrei, ela é Oyá, ela Oyá\nAh eparrei, é Iansã, é Iansã\nAh eparrei, quando Iansã vai pra batalha,\ntodos cavaleiros param só pra ver ela passar (2x)","Meu pai que barulho é esse\nQue vem lá do bambuzal (2x)\nÉ Iansã de Bale, oh dando ilá para guerrear (2x)\nO seu bailar é como ventania\nSeu grito é forte como um trovão\nSaravá bela Iansã\nÉ só egum que fica no chão\nNa mão direita traz sua espada\nNa mão esquerda seu patakotô\nCoroada com seu adê, foi Omolu quem lhe consagrou","E olha eu, olha eu\nE olha eu bela Oyá\nE olha eu, olha eu\nEla é Iansã, ela é meu Orixá\nQuando Iansã chegou\nSaravou yalorixá\nO ogã louvou sua coroa\nEparrey, bela Oyá\nEla é moça bonita\nMoça rica ela é\nConhecida dentro do santo\nEla é Iansã de Balé\nVamos pedir com fé\nCom amor no coração\nPedir à Iansã do Balé\nPara todos os filhos\nSua proteção","Ô iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar\nEla chegou bem devagar\nE observou em cada canto desse mundo\nE a fez pensar\nA luz brilhou em seu jacutá\nE anunciou\nPrepare que a guerreira agora vai reinar\nÔ iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar\nO tempo mudou! Fez o céu brilhar\nO Sol e a Lua irradiam energia\nPara renovar\nQue renasça o amor e fortaleça a fé\nPois iansã esta soprando pelo mundo\nUm vendaval de axé!\nÔ iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar"],
+nana:["São flores Nanã, são flores\nSão flores Nanã Buruquê\nSão flores Nanã, são flores\ndo seu filho Obaluaê (2x)\nNas horas de agonia\nQuem sempre vem me valer\nÉ seu filho, Nanã, é meu pai, ele é Obaluaê (2x)\nA senhora Sant'Ana\né Nanã Buruquê\nEla é mãe dos orixás, São Roque é Obaluaiê (2x)","Atraca, atraca que aí vem Nanã, ê ê\nAtraca, atraca que aí vem Nanã, ê ah (2x)\nÉ Nanã, rainha do mar\nÉ Nanã, mamãe Iemanjá\nÉ Nanã que eu vou saravá, ê ah","Sou de Nanã euá, euá, euá ê (4x)\nFui chamado de cordeiro mas não sou cordeiro não\nPreferi ficar calado que falar e levar não\nO meu silêncio é uma singela oração à minha santa de fé\nMeu cantar vibram as forças que sustentam o meu viver\nMeu cantar é um apelo que eu faço a Nanã, eh","Sarabitu ê, Nanã Buruquê (2x)\nOlha os seus filhos Nanã\nNós campos do Juremá\nSalve a coroa de Zambi\nE o cajado de Oxalá\nAuê, auê, Nanã Buruquê (2x)"],
+omolu:["Meu pai Oxalá é rei, venha me valer (2x)\nE o velho Omolu, atotô Obaluaê (2x)\nAtotô Obaluaê, atotô babá\nAtotô Obaluaê, atotô é orixá (2x)","Rolei na terra\nA bênção, atotô\nSeu xaxará\nA ferida secou (2x)\nA flor do velho\nMe curou (2x)","Quem vê um velho no caminho peça a bênção (2x)\nDeus abençoe, Deus abençoe\nDeus abençoe, Obaluaê, Deus abençoe (2x)","Ô atotô, atotô meu pai\nMinhas feridas venha curar\nE levai o meu sofrimento\nPara as águas claras de Iemanjá"],
+oxala:["Oxalá, meu pai\ntem pena de nós, tem dó\nSe a volta do mundo é grande,\nseus poderes são maior (2x)","No alto das oliveiras, no alto das oliveiras\nEu vi uma pombinha a voar (2x)\nVoou, voou\nTornou voar\nÉ uma pombinha mensageira de Oxalá (2x)","Oxalá é quem governa o mundo\nSó ele pode governar (Bis)\nOxalá é quem governa o mundo\nQue clareia a Umbanda e todos Orixás (Bis)","Lá no céu abriu uma porta\nOxalá apareceu (Bis)\nVinha com seu manto branco\nDerramando suas graças\nAbençoando os filhos seus (Bis)","No bambuzal de Iansã\nNas campinas de Ogum\nNa pedreira de Xangô Kaô\nOxalá é meu senhor\nNas matas de Oxóssi\nNas aguas de Nanã, Yemanjá\nNo reino de Oxum e Omulu\nOxalá é meu senhor","Oxalá criou a Terra,\nOxalá criou o Mar\nOxalá criou o mundo,\nOnde reinam os Orixás\nA pedra deu pra Xangô,\nMeu pai é rei justiceiro\nAs matas deu para Oxóssi,\nCaçador grande guerreiro\nMar com pescaria farta,\nEle deu pra Yemanjá\nOs rios deu para Oxum\ne os ventos para Oyá!\nGrandes campos de batalha\nDeu para Ogum guerreiro\nCampinas Pai Oxalá deu para seu boiadeiro\nJardim com lindos gramados\nDeu para as crianças brincar\nOxalá criou o mundo,\nOnde reinam os Orixás mas,\n(Refrão)\nO poço deu pra Nanã, a mais velha Orixá\nE o cruzeiro bendito deu pras Almas trabalhar\nFinalmente deu as ruas com estrela e luar\nPara Exus e Pombogiras nossos caminhos guardar!"]
 };
 
 // cantigas do usuário (do Sheets)
@@ -881,6 +855,5 @@ function carregarSalvas(){
 }
 carregarSalvas();
 </script>
-
-
-</body></html>
+</body>
+</html>
