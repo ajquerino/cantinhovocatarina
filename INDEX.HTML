@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<!-- saved from url=(0129)file:///C:/Users/queri/AppData/Local/Temp/MicrosoftEdgeDownloads/7022f399-0f5b-4c82-8690-70ae6cc1fa1d/cantinho_vovo_catarina.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0d1a2e">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Cantinho da Vovó Catarina</title>
+<link href="./Cantinho da Vovó Catarina_files/css2" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1628;--bg2:#0f2040;--bg3:#172a50;
+  --border:#2a4a7a;--accent:#4a9eff;--accent2:#7cc4ff;
+  --gold:#e8a832;--gold2:#f5c842;
+  --text:#d4e8ff;--text-dim:#7a9abf;
+  --hh:60px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+html{-webkit-text-size-adjust:100%;}
+body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
+
+.topbar{position:fixed;top:0;left:0;right:0;height:var(--hh);background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 16px;z-index:200;gap:12px;}
+.btn-back{background:none;border:none;color:var(--accent);font-size:1.5rem;cursor:pointer;padding:8px;display:none;min-width:40px;touch-action:manipulation;}
+.btn-back.vis{display:flex;align-items:center;}
+.top-tit{font-family:'Cinzel',serif;font-size:.88rem;font-weight:700;color:var(--gold);letter-spacing:.05em;flex:1;text-align:center;}
+.top-r{min-width:40px;}
+
+.page{display:none;min-height:100vh;padding-top:var(--hh);}
+.page.active{display:block;}
+
+/* HOME */
+.hero{text-align:center;padding:30px 20px 22px;background:radial-gradient(ellipse at 50% 0%,#0f3060 0%,var(--bg) 70%);border-bottom:1px solid var(--border);}
+.hero-ico{font-size:2.8rem;margin-bottom:8px;}
+.hero-tit{font-family:'Cinzel',serif;font-size:1.35rem;font-weight:700;color:var(--gold);letter-spacing:.06em;}
+.hero-sub{margin-top:5px;font-size:.83rem;font-style:italic;color:var(--text-dim);}
+.hero-axe{margin-top:8px;font-size:.78rem;color:var(--accent);letter-spacing:.1em;}
+
+.grid2{padding:18px 14px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:500px;margin:0 auto;}
+.grid3{padding:18px 14px;display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:500px;margin:0 auto;}
+
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:20px 10px 16px;text-align:center;cursor:pointer;touch-action:manipulation;position:relative;overflow:hidden;}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;}
+.card:active{background:var(--bg3);}
+.card .ico{font-size:2rem;display:block;margin-bottom:8px;}
+.card .tit{font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;color:var(--accent2);letter-spacing:.05em;display:block;}
+.card .sub{font-size:.68rem;color:var(--text-dim);margin-top:3px;display:block;font-style:italic;}
+
+.c-cant::before{background:#c8861a;}
+.c-defu::before{background:#9b59b6;}
+.c-prec::before{background:#27ae60;}
+.c-orac::before{background:#e74c3c;}
+.c-erva::before{background:#2ecc71;}
+.c-cale::before{background:#3498db;}
+.c-ofer::before{background:#e91e8c;}
+
+/* SUB-CARD menor */
+.scard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px 8px 12px;text-align:center;cursor:pointer;touch-action:manipulation;position:relative;overflow:hidden;}
+.scard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:.6;}
+.scard:active{background:var(--bg3);}
+.scard .ico{font-size:1.6rem;display:block;margin-bottom:5px;}
+.scard .tit{font-family:'Cinzel',serif;font-size:.72rem;color:var(--accent2);}
+
+/* PAGE HERO */
+.ph{text-align:center;padding:20px 18px 16px;background:radial-gradient(ellipse at 50% 0%,#0f3060 0%,var(--bg) 70%);border-bottom:1px solid var(--border);}
+.ph-ico{font-size:2rem;margin-bottom:5px;}
+.ph-tit{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--gold);letter-spacing:.05em;}
+
+/* CONTEÚDO */
+.content{padding:14px;max-width:700px;margin:0 auto;padding-bottom:90px;}
+.slabel{font-family:'Cinzel',serif;font-size:.7rem;color:var(--text-dim);letter-spacing:.1em;text-transform:uppercase;margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--border);}
+.empty{text-align:center;padding:40px 20px;color:var(--text-dim);font-style:italic;font-size:.9rem;}
+
+/* ITEM CARD */
+.item{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px 14px 20px;margin-bottom:10px;position:relative;overflow:hidden;cursor:pointer;touch-action:manipulation;}
+.item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);opacity:.6;}
+.item:active{background:var(--bg3);}
+.item-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px;}
+.item-title{font-family:'Cinzel',serif;font-size:.82rem;color:var(--accent2);flex:1;}
+.item-acts{display:flex;gap:5px;flex-shrink:0;}
+.item-body{font-size:.88rem;line-height:1.75;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:pre-wrap;}
+.item-body.full{display:block;-webkit-line-clamp:unset;}
+
+.btn-sm{background:none;border:1px solid var(--border);border-radius:6px;color:var(--text-dim);font-size:.75rem;padding:4px 8px;cursor:pointer;touch-action:manipulation;min-height:32px;}
+.btn-sm:active{background:var(--bg3);}
+
+/* CANTIGA card */
+.cant-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px 14px 20px;margin-bottom:10px;position:relative;overflow:hidden;cursor:pointer;touch-action:manipulation;}
+.cant-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);opacity:.6;}
+.cant-card:active{background:var(--bg3);}
+.cant-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px;}
+.cant-prev{font-size:.88rem;line-height:1.7;color:var(--text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.badge-o{font-size:.6rem;background:#0a2040;color:var(--accent);border:1px solid var(--border);border-radius:8px;padding:2px 7px;white-space:nowrap;}
+.badge-u{font-size:.6rem;background:#0a2a1a;color:#5ec88a;border:1px solid #1a5a3a;border-radius:8px;padding:2px 7px;white-space:nowrap;}
+
+/* VIEWER */
+.viewer{display:none;position:fixed;inset:0;background:var(--bg);z-index:500;overflow-y:auto;padding-bottom:40px;}
+.viewer.open{display:block;}
+.v-hdr{position:sticky;top:0;background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:12px;}
+.v-close{background:none;border:none;color:var(--accent);font-size:1.4rem;cursor:pointer;padding:6px;touch-action:manipulation;}
+.v-tit{font-family:'Cinzel',serif;font-size:.88rem;color:var(--gold);flex:1;}
+.v-body{padding:20px 16px;max-width:700px;margin:0 auto;}
+.v-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px 18px 20px 22px;position:relative;overflow:hidden;margin-bottom:14px;}
+.v-box::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--gold);}
+.v-box p{font-size:.98rem;line-height:2;color:var(--text);white-space:pre-wrap;word-break:break-word;}
+.v-acts{display:flex;gap:10px;}
+
+/* BOTÃO + */
+#btnAdd{position:fixed;bottom:24px;right:18px;width:54px;height:54px;border-radius:50%;background:var(--gold);border:none;color:#0a1628;font-size:1.7rem;cursor:pointer;z-index:300;box-shadow:0 4px 20px rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;touch-action:manipulation;}
+#btnAdd.vis{display:flex;}
+#btnAdd:active{transform:scale(.93);}
+
+/* MODAIS */
+.mov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:400;align-items:flex-end;justify-content:center;}
+.mov.open{display:flex;}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:16px 16px 0 0;padding:22px 16px 38px;width:100%;max-width:560px;animation:su .22s ease;max-height:92vh;overflow-y:auto;}
+.modal-d{background:var(--bg2);border:1px solid #5a1a1a;border-radius:16px 16px 0 0;padding:26px 16px 38px;width:100%;max-width:400px;animation:su .2s ease;text-align:center;}
+@keyframes su{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal h2{font-family:'Cinzel',serif;font-size:.95rem;color:var(--gold);margin-bottom:16px;letter-spacing:.05em;}
+.modal-d h2{font-family:'Cinzel',serif;font-size:.95rem;color:#e05050;margin-bottom:10px;}
+.modal-d p{color:var(--text);margin-bottom:18px;line-height:1.7;}
+.modal label{display:block;font-size:.7rem;color:var(--text-dim);margin-bottom:5px;letter-spacing:.05em;text-transform:uppercase;}
+.modal select,.modal input,.modal textarea{width:100%;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:'IM Fell English',Georgia,serif;font-size:.95rem;padding:11px 13px;margin-bottom:14px;outline:none;-webkit-appearance:none;}
+.modal select:focus,.modal input:focus,.modal textarea:focus{border-color:var(--accent);}
+.modal textarea{min-height:130px;resize:vertical;}
+.mbtns{display:flex;gap:10px;}
+.bp{flex:1;background:var(--gold);color:#0a1628;border:none;border-radius:10px;padding:14px;font-family:'Cinzel',serif;font-size:.85rem;font-weight:700;cursor:pointer;touch-action:manipulation;min-height:46px;}
+.bp:active{background:var(--gold2);}
+.bp:disabled{opacity:.5;}
+.bs{background:var(--bg3);color:var(--text-dim);border:1px solid var(--border);border-radius:10px;padding:14px 16px;font-family:'Cinzel',serif;font-size:.85rem;cursor:pointer;touch-action:manipulation;min-height:46px;}
+.bd{flex:1;background:#7a1a1a;color:#e8dcc8;border:none;border-radius:10px;padding:14px;font-family:'Cinzel',serif;font-size:.85rem;font-weight:700;cursor:pointer;touch-action:manipulation;min-height:46px;}
+.bd:active{background:#a02020;}
+.mmsg{text-align:center;font-size:.83rem;margin-top:10px;min-height:18px;font-style:italic;}
+.ok{color:#5ec88a;}.er{color:#e05050;}
+
+@media(min-width:480px){.grid2,.grid3{grid-template-columns:1fr 1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button class="btn-back" id="btnBack" onclick="voltar()" style="display: none;">←</button>
+  <div class="top-tit" id="topTit">Cantinho da Vovó Catarina</div>
+  <div class="top-r"></div>
+</div>
+
+<!-- HOME -->
+<div class="page active" id="p-home">
+  <div class="hero">
+    <div class="hero-ico">🕯️</div>
+    <div class="hero-tit">Cantinho da Vovó Catarina</div>
+    <div class="hero-sub">Umbanda — Axé, Fé e Conhecimento</div>
+    <div class="hero-axe">✦ Saravá ✦</div>
+  </div>
+  <div class="grid2">
+    <div class="card c-cant" onclick="ir(&#39;cantigas&#39;,&#39;🎵 Cantigas&#39;)"><span class="ico">🎵</span><span class="tit">Cantigas</span><span class="sub">Pontos por entidade</span></div>
+    <div class="card c-defu" onclick="ir(&#39;defumacoes&#39;,&#39;🌿 Defumações&#39;)"><span class="ico">🌿</span><span class="tit">Defumações</span><span class="sub">Receitas e rituais</span></div>
+    <div class="card c-prec" onclick="ir(&#39;preceitos&#39;,&#39;📜 Preceitos&#39;)"><span class="ico">📜</span><span class="tit">Preceitos</span><span class="sub">Orientações e cuidados</span></div>
+    <div class="card c-orac" onclick="ir(&#39;oracoes&#39;,&#39;🙏 Orações&#39;)"><span class="ico">🙏</span><span class="tit">Orações</span><span class="sub">Preces e invocações</span></div>
+    <div class="card c-erva" onclick="ir(&#39;ervas&#39;,&#39;🌱 Ervas e Plantas&#39;)"><span class="ico">🌱</span><span class="tit">Ervas e Plantas</span><span class="sub">Usos e propriedades</span></div>
+    <div class="card c-cale" onclick="ir(&#39;calendario&#39;,&#39;📅 Calendário&#39;)"><span class="ico">📅</span><span class="tit">Calendário</span><span class="sub">Dias e festas</span></div>
+    <div class="card c-ofer" onclick="ir(&#39;oferendas&#39;,&#39;🌸 Oferendas&#39;)"><span class="ico">🌸</span><span class="tit">Oferendas</span><span class="sub">Por Orixá e entidade</span></div>
+  </div>
+</div>
+
+<!-- CANTIGAS - entidades -->
+<div class="page" id="p-cantigas">
+  <div class="ph"><div class="ph-ico">🎵</div><div class="ph-tit">Cantigas</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irEnt(&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi / Caboclos&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irEnt(&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irEnt(&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irEnt(&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos / Malandros&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irEnt(&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu e Pombagira&#39;)"><span class="ico">🔱</span><span class="tit">Exu / Pombagira</span></div>
+    <div class="scard" onclick="irEnt(&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irEnt(&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irEnt(&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irEnt(&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irEnt(&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irEnt(&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irEnt(&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irEnt(&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+  </div>
+</div>
+
+<!-- ENTIDADE (lista cantigas) -->
+<div class="page" id="p-entidade">
+  <div class="ph" id="ent-ph">
+    <div class="ph-ico" id="ent-ico">🌿</div>
+    <div class="ph-tit" id="ent-nom">Oxóssi / Caboclos</div>
+  </div>
+  <div class="content" id="ent-lista"><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo da mata virgem, da mata cerrada, lá do juremá (2x)
+Quem manda na mata é Oxóssi, quem manda no céu Oxalá (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ô oke, caboclo, quero ver girar
+Quero ver caboclo de umbanda arriar (2x)
+Quem manda na mata é Oxóssi, Oxóssi é caçador</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Eu vi meu pai assoviar, ele mandou chamar
+Vem de aruanda ê, vem de aruanda ah</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Oxóssi gira, ele gira na macaia (2x)
+Gira, gira no meu terreiro</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ô juremê, ô juremá
+Suas folhas caíram serenas jurema, dentro desse congá (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Estava na beira do rio sem poder atravessar
+Chamei pelos caboclos, caboclos tupinambá (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Que lindo penacho é aquele
+É um lindo penacho de arara (2x)
+Mas vem rompendo a mata virgem, o caboclo Ubirajara</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ubirajara lá na mata ele é o rei
+Ubirajara lá na mata ele é o tata (2x)
+Lá na mata sua flecha zua</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Os caboclos desceram lá do alto da serra
+E traziam no peito uma cobra coral (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Foi numa tarde serena, lá na mata da jurema
+Que ouvi os caboclos bradar… Kiô kiô kiô</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Vestimenta de caboclo é samambaia, é samambaia (2x)
+Saia caboclo, não se atrapalha</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo não tem caminho para caminhar (2x)
+Ele caminha por cima da folha, por baixo da folha</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Lê, lele lere, lere lere lere lerá
+Caboclo Sete Flechas no congá</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Ele atirou… ele atirou ninguém viu (2x)
+Seu Mata Virgem quem sabe… aonde a flecha caiu</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Atira, atira, eu atirei, no congá vou atirar (2x)
+Veado na mata é corredor, Oxóssi na mata é caçador</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo roxo da pele morena
+Ele é Oxóssi, caçador lá da Jurema (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Soltei minha cabocla de pena
+Soltei lá na mata, pra ela trabalhar (2x)</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Eu vi chover, eu vi relampear
+Mas mesmo assim o céu estava azul
+Samborê, pemba, folha de jurema</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">No meio da mata virgem
+Uma linda cabocla eu vi (2x)
+Com seu saiote feito de pena, é a Jurema</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Auê, auê, meus caboclos auê (4x)
+Caboclo mora na mata, na beira da sapucaia</p></div><div class="cant-card"><div class="cant-top"><em class="badge-o">original</em><div class="item-acts"><button class="btn-sm">✏️</button><button class="btn-sm">🗑</button></div></div><p class="cant-prev">Caboclo, pega a sua flecha, pega o seu bodoque
+que a jurema lhe chamou</p></div></div>
+</div>
+
+<!-- DEFUMAÇÕES sub-abas -->
+<div class="page" id="p-defumacoes">
+  <div class="ph"><div class="ph-ico">🌿</div><div class="ph-tit">Defumações</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;limpeza&#39;,&#39;🧹&#39;,&#39;Limpeza e Purificação&#39;)"><span class="ico">🧹</span><span class="tit">Limpeza</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;descarrego&#39;,&#39;⚡&#39;,&#39;Descarrego&#39;)"><span class="ico">⚡</span><span class="tit">Descarrego</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;prosperidade&#39;,&#39;✨&#39;,&#39;Prosperidade&#39;)"><span class="ico">✨</span><span class="tit">Prosperidade</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;amor&#39;,&#39;💛&#39;,&#39;Amor e União&#39;)"><span class="ico">💛</span><span class="tit">Amor e União</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;protecao&#39;,&#39;🛡️&#39;,&#39;Proteção&#39;)"><span class="ico">🛡️</span><span class="tit">Proteção</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;saude&#39;,&#39;💚&#39;,&#39;Saúde e Cura&#39;)"><span class="ico">💚</span><span class="tit">Saúde e Cura</span></div>
+    <div class="scard" onclick="ir(&#39;def-orixas&#39;,&#39;🌟 Defumações por Orixá&#39;)"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
+  </div>
+</div>
+
+<!-- ORAÇÕES sub-abas -->
+<div class="page" id="p-oracoes">
+  <div class="ph"><div class="ph-ico">🙏</div><div class="ph-tit">Orações</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;geral&#39;,&#39;✨&#39;,&#39;Geral&#39;)"><span class="ico">✨</span><span class="tit">Geral</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi / Caboclos&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu / Pombagira&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub(&#39;ora&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+  </div>
+</div>
+
+<!-- ERVAS sub-abas -->
+<div class="page" id="p-ervas">
+  <div class="ph"><div class="ph-ico">🌱</div><div class="ph-tit">Ervas e Plantas</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;quentes&#39;,&#39;🔥&#39;,&#39;Ervas Quentes&#39;)"><span class="ico">🔥</span><span class="tit">Quentes</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;frias&#39;,&#39;💧&#39;,&#39;Ervas Frias&#39;)"><span class="ico">💧</span><span class="tit">Frias</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;mornas&#39;,&#39;🌿&#39;,&#39;Ervas Mornas&#39;)"><span class="ico">🌿</span><span class="tit">Mornas</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;aguas&#39;,&#39;🌊&#39;,&#39;Ervas das Águas&#39;)"><span class="ico">🌊</span><span class="tit">Das Águas</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;prosperidade&#39;,&#39;✨&#39;,&#39;Ervas de Prosperidade&#39;)"><span class="ico">✨</span><span class="tit">Prosperidade</span></div>
+    <div class="scard" onclick="ir(&#39;erv-orixas&#39;,&#39;🌟 Ervas por Orixá&#39;)"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
+  </div>
+</div>
+
+<!-- PRECEITOS -->
+<div class="page" id="p-preceitos">
+  <div class="ph"><div class="ph-ico">📜</div><div class="ph-tit">Preceitos</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;gerais&#39;,&#39;📜&#39;,&#39;Preceitos Gerais&#39;)"><span class="ico">📜</span><span class="tit">Gerais</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;terreiro&#39;,&#39;🏠&#39;,&#39;Do Terreiro&#39;)"><span class="ico">🏠</span><span class="tit">Do Terreiro</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;diasemana&#39;,&#39;📅&#39;,&#39;Dias da Semana&#39;)"><span class="ico">📅</span><span class="tit">Dias da Semana</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;banhos&#39;,&#39;🛁&#39;,&#39;Banhos de Preceito&#39;)"><span class="ico">🛁</span><span class="tit">Banhos</span></div>
+    <div class="scard" onclick="ir(&#39;prec-orixas&#39;,&#39;🌟 Preceitos por Orixá&#39;)"><span class="ico">🌟</span><span class="tit">Por Orixá</span></div>
+  </div>
+</div>
+
+
+<!-- PRECEITOS POR ORIXÁ - grade -->
+<div class="page" id="p-prec-orixas">
+  <div class="ph"><div class="ph-ico">🌟</div><div class="ph-tit">Preceitos por Orixá</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu / Pombagira&#39;)"><span class="ico">🔱</span><span class="tit">Exu / Pombagira</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos / Malandros&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub(&#39;prec&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+  </div>
+</div>
+
+<!-- CALENDÁRIO -->
+<div class="page" id="p-calendario">
+  <div class="ph"><div class="ph-ico">📅</div><div class="ph-tit">Calendário de Giras</div></div>
+  <div class="content" id="lista-cal">
+    <div class="empty">Nenhuma data adicionada ainda.<br>Toque em ＋ para adicionar.</div>
+  </div>
+</div>
+
+<!-- SUB-SEÇÃO GENÉRICA -->
+<div class="page" id="p-sub">
+  <div class="ph" id="sub-ph">
+    <div class="ph-ico" id="sub-ico">🔥</div>
+    <div class="ph-tit" id="sub-nom">Ervas Quentes</div>
+  </div>
+  <div class="content" id="sub-lista"><div class="empty">Nenhum conteúdo ainda.<br>Toque em ＋ para adicionar.</div></div>
+</div>
+
+
+
+<!-- DEFUMAÇÕES POR ORIXÁ POR ORIXÁ - grade -->
+<div class="page" id="p-def-orixas">
+  <div class="ph"><div class="ph-ico">🌿</div><div class="ph-tit">Defumações por Orixá</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;pombagira&#39;,&#39;🌹&#39;,&#39;Pombagira&#39;)"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub(&#39;def&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+  </div>
+</div>
+
+<!-- ERVAS POR ORIXÁ POR ORIXÁ - grade -->
+<div class="page" id="p-erv-orixas">
+  <div class="ph"><div class="ph-ico">🌱</div><div class="ph-tit">Ervas por Orixá</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;pombagira&#39;,&#39;🌹&#39;,&#39;Pombagira&#39;)"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub(&#39;erv&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+  </div>
+</div>
+<!-- OFERENDAS - grade -->
+<div class="page" id="p-oferendas">
+  <div class="ph"><div class="ph-ico">🌸</div><div class="ph-tit">Oferendas</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxala&#39;,&#39;🕊️&#39;,&#39;Oxalá&#39;)"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ogum&#39;,&#39;⚔️&#39;,&#39;Ogum&#39;)"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxossi&#39;,&#39;🌿&#39;,&#39;Oxóssi&#39;)"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;xango&#39;,&#39;⚡&#39;,&#39;Xangô&#39;)"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxum&#39;,&#39;💛&#39;,&#39;Oxum&#39;)"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;iemanja&#39;,&#39;🌊&#39;,&#39;Iemanjá&#39;)"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;iansa&#39;,&#39;🌪️&#39;,&#39;Iansã&#39;)"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;nana&#39;,&#39;🪷&#39;,&#39;Nanã&#39;)"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;omolu&#39;,&#39;🌾&#39;,&#39;Omolu / Obaluaê&#39;)"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oxumare&#39;,&#39;🌈&#39;,&#39;Oxumaré&#39;)"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ossanha&#39;,&#39;🌱&#39;,&#39;Ossanha&#39;)"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;oba&#39;,&#39;🔴&#39;,&#39;Obá&#39;)"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ewa&#39;,&#39;🟡&#39;,&#39;Ewá&#39;)"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;logun&#39;,&#39;🎯&#39;,&#39;Logunedé&#39;)"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;pretos&#39;,&#39;📿&#39;,&#39;Pretos Velhos&#39;)"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;caboclos&#39;,&#39;🏹&#39;,&#39;Caboclos&#39;)"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;exu&#39;,&#39;🔱&#39;,&#39;Exu&#39;)"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;pombagira&#39;,&#39;🌹&#39;,&#39;Pombagira&#39;)"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;baianos&#39;,&#39;🎭&#39;,&#39;Baianos / Malandros&#39;)"><span class="ico">🎭</span><span class="tit">Baianos</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;boiadeiros&#39;,&#39;🐂&#39;,&#39;Boiadeiros&#39;)"><span class="ico">🐂</span><span class="tit">Boiadeiros</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;eres&#39;,&#39;👶&#39;,&#39;Erês / Ibejis&#39;)"><span class="ico">👶</span><span class="tit">Erês / Ibejis</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;marinheiros&#39;,&#39;⚓&#39;,&#39;Marinheiros&#39;)"><span class="ico">⚓</span><span class="tit">Marinheiros</span></div>
+    <div class="scard" onclick="irSub(&#39;ofer&#39;,&#39;ciganos&#39;,&#39;🔮&#39;,&#39;Ciganos&#39;)"><span class="ico">🔮</span><span class="tit">Ciganos</span></div>
+  </div>
+</div>
+
+<!-- VIEWER CANTIGA -->
+<div class="viewer" id="viewer">
+  <div class="v-hdr">
+    <button class="v-close" onclick="fecharViewer()">←</button>
+    <div class="v-tit" id="v-tit"></div>
+  </div>
+  <div class="v-body">
+    <div class="v-box"><p id="v-txt"></p></div>
+    <div class="v-acts" id="v-acts"></div>
+  </div>
+</div>
+
+<!-- BOTÃO + -->
+<button id="btnAdd" onclick="abrirAdd()" class="">＋</button>
+
+<!-- MODAL ADD/EDIT CANTIGA -->
+<div class="mov" id="mCant" onclick="if(event.target.id===&#39;mCant&#39;)fecharMCant()">
+  <div class="modal">
+    <h2 id="mCantTit">✦ Adicionar Cantiga</h2>
+    <label>Entidade</label>
+    <select id="mCantEnt">
+      <option value="oxossi">🌿 Oxóssi / Caboclos</option>
+      <option value="boiadeiros">🐂 Boiadeiros</option>
+      <option value="pretos">📿 Pretos Velhos</option>
+      <option value="baianos">🎭 Baianos / Malandros</option>
+      <option value="exu">🔱 Exu e Pombagira</option>
+      <option value="ogum">⚔️ Ogum</option>
+      <option value="xango">⚡ Xangô</option>
+      <option value="oxum">💛 Oxum</option>
+      <option value="iemanja">🌊 Iemanjá</option>
+      <option value="iansa">🌪️ Iansã</option>
+      <option value="nana">🪷 Nanã</option>
+      <option value="omolu">🌾 Omolu / Obaluaê</option>
+      <option value="oxala">🕊️ Oxalá</option>
+    </select>
+    <label>Letra da Cantiga</label>
+    <textarea id="mCantTxt" placeholder="Digite a letra aqui..."></textarea>
+    <div class="mbtns">
+      <button class="bs" onclick="fecharMCant()">Cancelar</button>
+      <button class="bp" id="mCantBtn" onclick="salvarCantiga()">Salvar ✦</button>
+    </div>
+    <div class="mmsg" id="mCantMsg"></div>
+  </div>
+</div>
+
+<!-- MODAL ADD/EDIT ITEM GENÉRICO -->
+<div class="mov" id="mItem" onclick="if(event.target.id===&#39;mItem&#39;)fecharMItem()">
+  <div class="modal">
+    <h2 id="mItemTit">✦ Adicionar</h2>
+    <label>Título</label>
+    <input type="text" id="mItemTitulo" placeholder="Ex: Defumação de Limpeza do Lar">
+    <label>Conteúdo</label>
+    <textarea id="mItemTxt" placeholder="Digite o conteúdo aqui..."></textarea>
+    <div class="mbtns">
+      <button class="bs" onclick="fecharMItem()">Cancelar</button>
+      <button class="bp" id="mItemBtn" onclick="salvarItem()">Salvar ✦</button>
+    </div>
+    <div class="mmsg" id="mItemMsg"></div>
+  </div>
+</div>
+
+<!-- MODAL DEL -->
+<div class="mov" id="mDel" onclick="if(event.target.id===&#39;mDel&#39;)fecharMDel()">
+  <div class="modal-d">
+    <h2>Excluir</h2>
+    <p>Tem certeza que quer <strong>excluir</strong> este item?</p>
+    <div class="mbtns">
+      <button class="bs" onclick="fecharMDel()">Cancelar</button>
+      <button class="bd" id="mDelBtn" onclick="confirmarDel()">Excluir</button>
+    </div>
+    <div class="mmsg" id="mDelMsg"></div>
+  </div>
+</div>
+
+<script>
+var SHEET='https://script.google.com/macros/s/AKfycbzFgnrmF0S4cSZfxI3MQCstsylTDBVXF4PHcD-jcvGC6HfHldG7BP55UOH6jp1vv2WF/exec';
+
+// ── DADOS ──
+var ENT={
+  oxossi:{ico:'🌿',nom:'Oxóssi / Caboclos'},
+  boiadeiros:{ico:'🐂',nom:'Boiadeiros'},
+  pretos:{ico:'📿',nom:'Pretos Velhos'},
+  baianos:{ico:'🎭',nom:'Baianos / Malandros'},
+  exu:{ico:'🔱',nom:'Exu e Pombagira'},
+  ogum:{ico:'⚔️',nom:'Ogum'},
+  xango:{ico:'⚡',nom:'Xangô'},
+  oxum:{ico:'💛',nom:'Oxum'},
+  iemanja:{ico:'🌊',nom:'Iemanjá'},
+  iansa:{ico:'🌪️',nom:'Iansã'},
+  nana:{ico:'🪷',nom:'Nanã'},
+  omolu:{ico:'🌾',nom:'Omolu / Obaluaê'},
+  oxala:{ico:'🕊️',nom:'Oxalá'}
+};
+
+var CANT_ORIG={
+oxossi:["Caboclo da mata virgem, da mata cerrada, lá do juremá (2x)\nQuem manda na mata é Oxóssi, quem manda no céu Oxalá (2x)","Ô oke, caboclo, quero ver girar\nQuero ver caboclo de umbanda arriar (2x)\nQuem manda na mata é Oxóssi, Oxóssi é caçador","Eu vi meu pai assoviar, ele mandou chamar\nVem de aruanda ê, vem de aruanda ah","Oxóssi gira, ele gira na macaia (2x)\nGira, gira no meu terreiro","Ô juremê, ô juremá\nSuas folhas caíram serenas jurema, dentro desse congá (2x)","Estava na beira do rio sem poder atravessar\nChamei pelos caboclos, caboclos tupinambá (2x)","Que lindo penacho é aquele\nÉ um lindo penacho de arara (2x)\nMas vem rompendo a mata virgem, o caboclo Ubirajara","Ubirajara lá na mata ele é o rei\nUbirajara lá na mata ele é o tata (2x)\nLá na mata sua flecha zua","Os caboclos desceram lá do alto da serra\nE traziam no peito uma cobra coral (2x)","Foi numa tarde serena, lá na mata da jurema\nQue ouvi os caboclos bradar… Kiô kiô kiô","Vestimenta de caboclo é samambaia, é samambaia (2x)\nSaia caboclo, não se atrapalha","Caboclo não tem caminho para caminhar (2x)\nEle caminha por cima da folha, por baixo da folha","Lê, lele lere, lere lere lere lerá\nCaboclo Sete Flechas no congá","Ele atirou… ele atirou ninguém viu (2x)\nSeu Mata Virgem quem sabe… aonde a flecha caiu","Atira, atira, eu atirei, no congá vou atirar (2x)\nVeado na mata é corredor, Oxóssi na mata é caçador","Caboclo roxo da pele morena\nEle é Oxóssi, caçador lá da Jurema (2x)","Soltei minha cabocla de pena\nSoltei lá na mata, pra ela trabalhar (2x)","Eu vi chover, eu vi relampear\nMas mesmo assim o céu estava azul\nSamborê, pemba, folha de jurema","No meio da mata virgem\nUma linda cabocla eu vi (2x)\nCom seu saiote feito de pena, é a Jurema","Auê, auê, meus caboclos auê (4x)\nCaboclo mora na mata, na beira da sapucaia","Caboclo, pega a sua flecha, pega o seu bodoque\nque a jurema lhe chamou"],
+boiadeiros:["Seu boiadeiro por aqui choveu (2x)\nChoveu, choveu, relampiou\nFoi tanta água que meu boi nadou","Foi nesse passo que eu saí da minha aldeia (2x)\nMontado em meu cavalo, com meu chapéu de lado","Pedrinha miudinha, pedrinha de Aruanda, ê\nLajedo tão grande, tão grande de Aruanda","Quando matar o boi, o mocotó é meu (2x)\nSó assim ele me paga a carreira que me deu","Boa noite, meus senhores (2x)\nDai-me licença para um cavaleiro\nEu moro em mata cerrada","Eu acendi uma vela por detrás da bananeira\nde repente pegou fogo e virou uma fogueira (2x)"],
+pretos:["Lá vem vovó descendo a serra com sua sacola\nCom seu rosário, seu patuá, ela vem de Angola (2x)","Preto velho tá cansado de tanto trabalhar\nPreto velho tá quebrado de tanto curimbar (2x)","Adorei as almas e as almas me atenderam (2x)\nEram as santas almas lá do cruzeiro","Vovô não gosta de casca de coco no terreiro (2x)\nCasca de coco faz lembrar do cativeiro","Fio, se suncê precisar, é só pensar na vovó\nQue ela vem te ajudar (2x)","Vovó Catarina chegou\nTrazendo a proteção (2x)\nEstenda sua bandeira, vovó\nE salve a sua nação","Saravá pra vovó Catarina que é dona da gira no meu terreiro\nSaravá pra vovó Catarina e pra todas as almas do cativeiro (2x)","Menino Jesus de Praga, ah quem lhe deu essa toalha branca (2x)\nFoi a baiana do engenho, é pra vovó Maria Conga","Pai Joaquim, ê ê, pai Joaquim ê ah\nPai Joaquim é quem vem de Angola","Um navio negreiro que vem beirando o mar\nTrazendo os africanos para trabalhar (2x)","Senhora do Rosário, foi quem me trouxe aqui (2x)\nA água do mar é santa, eu vi, eu vi","A sineta do céu bateu, Oxalá já diz que é hora (2x)\nEu vou, eu vou, eu vou, Fica com Deus e Nossa Senhora"],
+baianos:["Baiano é povo bom, povo trabalhador (2x)\nQuem mexe com baiano mexe com Nosso Senhor","Baiano bom é o que sabe trabalhar (2x)\nBaiano bom é o que sobe no coqueiro","Olha a flor da laranjeira (alô Bahia)\nCheira mais que aroeira (alô Bahia)","Eu fui à Bahia e implorei ao meu Senhor do Bonfim (2x)","Quando eu vim da Bahia, caminhos eu não tinha (2x)","O baiano amarrou o boi lá no pé do araçá (2x)\nSegura, segura, segura","Embala eu, embala eu\nMenininha do Gantois (2x)","Malandro bom traz de lado seu chapéu (2x)\nEle é seu Camisa Preta, ele é o Malandro Miguel","Malandro desce o morro para dar o seu recado\nÉ melhor andar sozinho do que mal acompanhado"],
+exu:["Balança figueira, balança figueira\nBalança figueira, eu quero ver exú cair (2x)","Ô Sete, ô Sete, ô Sete Encruzilhadas\nToma conta e presta conta no romper da madrugada","Eu amei alguém, e esse alguém não ama ninguém (2x)\nEu amei o sol, eu amei a lua\nLá na encruzilhada eu amei Seu Tranca Ruas","Exú Tiriri de umbanda, morador da encruzilhada\nToma conta e presta conta no romper da madrugada","O sino da igrejinha faz belém, bem-blom (2x)\nDeu meia-noite, o galo já cantou","Deu meia-noite, a lua se escondeu\nLá na encruzilhada, dando a sua gargalhada\nTranca Rua apareceu","Quem nesse mundo nunca ouviu dizer\nDe uma cigana que mora naquela estrada","Foi em uma estrada velha\nNa subida de uma serra\nNuma noite de luar\nPombagira da figueira","Cemitério é praça linda, mas ninguém passear (2x)\nNuma catacumba nova, Maria Padilha mora lá","Abre a roda, e deixa a pombagira passar (2x)\nEla tem peito de aço e coração de sabiá","Arreda homem que aí vem mulher (2x)\nEla é a pombo-gira, rainha do cabaré","Ê Caveira\nFirma seu ponto na folha da bananeira, exu Caveira (2x)","Hoje a noite vai ser de magia (2x)\nVou chamar Maria Farrapo pra fazer feitiçaria (2x)","Disseram que iam cortar, que iam cortar a minha língua de trapo (2x)\nMas eu quero ver cortar a língua de Farrapo"],
+ogum:["Eu tenho sete espadas pra me defender\nEu tenho Ogum em minha companhia (2x)","Ogum em seu cavalo corre\nE a sua espada reluz (2x)\nOgum, Ogum megê","Ogum de Lei, não me deixe sofrer tanto assim meu pai (2x)","Se meu pai é Ogum, vencedor de demanda\nEle vem de Aruanda pra saudar filho de umbanda","Quando Ogum partiu pra guerra\nIemanjá chorou (2x)\nQuando Ogum voltou vencedor, Iemanjá cantou","Quem beira rio, beira rio, beira mar\nO que se ganha de Ogum, só Ogum pode tirar","Ogum, cavaleiro da lua\nSó ele navega no mar (2x)"],
+xango:["Estava na pedreira conversando com Xangô\nE foi assim que ele me ensinou (2x)","Dizem que Xangô mora na pedreira\nMas não é lá sua morada verdadeira (2x)","Estão queimando velas\nPara me derrubar\nXangô, meu pai, amarra os inimigos","Ele bradou na aldeia\nBradou na cachoeira\nEm noite de luar\nNo alto da pedreira","Se eu errei, aqui estou, pedindo maleme meu pai Xangô (2x)\nMandai a faísca de um raio pra me iluminar\nSegura a pedra na pedreira, não deixa rolar\nXangô! Kao, meu pai!\nOs seus filhos bambeiam mas não caem (2x)"],
+oxum:["Já chegou, já chegou, já chegou no meu congá (2x)\nJá chegou mamãe Oxum, rainha dos orixás","Eu vi mamãe Oxum na cachoeira\nSentada na beira do rio (2x)\nColhendo lírio, lírio ê","A minha mãe é Oxum\nOra yeye o\nRainha das cachoeiras","Oxum, Oxum me dê\nOxum me dê alguém para amar (2x)\nÓ mamãe Oxum, princesa do mar","Eu vi mamãe Oxum\nCantando na cachoeira\nDançando toda faceira\nTão linda como ela faz\nE quando ela canta\nXangô senta na pedreira\nOxossi lá na ribeira\nNem vento não venta mais\nAie! ieo!\nMinha mãe\nAie! ieo!\nMamãe Oxum\nAie! ieo!\nMoça bonita demais!\nCanta Oxum\nAlivia meu coração\nMe tira da solidão\nMe traz paz"],
+iemanja:["Seu colar é de concha, seu vestido se arrasta na areia\nEla tem cheiro de mar, ela sabe cantar ponto de sereia","Eu fui na beira da praia\nPra ver o balanço do mar (2x)","Mãe d'água, rainha das ondas, sereia do mar\nComo é lindo o canto de Iemanjá","Ô Iemanjá, mas como vem rompendo água (2x)\nSaia da água linda sereia"],
+iansa:["Eram duas ventarolas, duas ventarolas\nVentando no mar (2x)\nUma era Iansã, eparrei\nA outra era Iemanjá","Iansã tem um leque que venta\nPra abanar dia de calor","Olha que o céu clareou\nQuando o dia raiou\nFez o filho pensar\nA mãe do tempo mandou","Meu pai que barulho é esse\nQue vem lá do bambuzal (2x)\nÉ Iansã de Bale, oh dando ilá para guerrear","Ô iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar\nEla chegou bem devagar\nE observou em cada canto desse mundo\nE a fez pensar\nA luz brilhou em seu jacutá\nE anunciou\nPrepare que a guerreira agora vai reinar\nÔ iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar\nO tempo mudou! Fez o céu brilhar\nO Sol e a Lua irradiam energia\nPara renovar\nQue renasça o amor e fortaleça a fé\nPois iansã esta soprando pelo mundo\nUm vendaval de axé!\nÔ iansã menina seu jeito me fascina\nÉ de arrepiar\nÔ iansã guerreira não há barreiras\nPra lhe segurar"],
+nana:["São flores Nanã, são flores\nSão flores Nanã Buruquê\ndas flores de seu filho Obaluaê","Atraca, atraca que aí vem Nanã, ê ê\nAtraca, atraca que aí vem Nanã","Sarabitu ê, Nanã Buruquê (2x)\nOlha os seus filhos Nanã"],
+omolu:["Meu pai Oxalá é rei, venha me valer (2x)\nE o velho Omolu, atotô Obaluaê","Rolei na terra\nA benção, atotô\nSeu xaxará\nA ferida secou (2x)","Quem vê um velho no caminho peça a benção (2x)\nDeus abençoe, Obaluaê","Ô atotô, atotô meu pai\nMinhas feridas venha curar"],
+oxala:["Meu pai Oxalá é rei, venha me valer (2x)\nOxalá, meu pai\ntem pena de nós, tem dó","No alto das oliveiras\nEu vi uma pombinha a voar (2x)\nÉ uma pombinha mensageira de Oxalá","Oxalá é quem governa o mundo\nSó ele pode governar (Bis)\nQue clareia a Umbanda e todos Orixás (Bis)","Lá no céu abriu uma porta\nOxalá apareceu (Bis)\nVinha com seu manto branco\nDerramando suas graças\nAbençoando os filhos seus (Bis)","No bambuzal de Iansã\nNas campinas de Ogum\nNa pedreira de Xangô Kaô\nOxalá é meu senhor\nNas matas de Oxóssi\nNas aguas de Nanã, Yemanjá\nNo reino de Oxum e Omulu\nOxalá é meu senhor","Oxalá criou a Terra,\nOxalá criou o Mar\nOxalá criou o mundo,\nOnde reinam os Orixás\nA pedra deu pra Xangô,\nMeu pai é rei justiceiro\nAs matas deu para Oxóssi,\nCaçador grande guerreiro\nMar com pescaria farta,\nEle deu pra Yemanjá\nOs rios deu para Oxum\ne os ventos para Oyá!\nGrandes campos de batalha\nDeu para Ogum guerreiro\nCampinas Pai Oxalá deu para seu boiadeiro\nJardim com lindos gramados\nDeu para as crianças brincar\nOxalá criou o mundo,\nOnde reinam os Orixás mas,\n(Refrão)\nO poço deu pra Nanã, a mais velha Orixá\nE o cruzeiro bendito deu pras Almas trabalhar\nFinalmente deu as ruas com estrela e luar\nPara Exus e Pombogiras nossos caminhos guardar!"]
+};
+
+// cantigas do usuário (do Sheets)
+var CANT_USER={};
+// itens genéricos por sub-seção (def-limpeza, ora-geral, erv-quentes, prec, cal)
+var ITEMS={};
+
+// ── NAVEGAÇÃO ──
+var pagAtual='home';
+var pilha=[];
+var entAtual=null;
+var subAtual=null; // {sec, key, ico, nom}
+var modoAdd=null; // 'cantiga' ou 'item'
+
+function ir(pg, tit){
+  pilha.push(pagAtual);
+  pagAtual=pg;
+  mostrar('p-'+pg, tit);
+  if(pg==='calendario'){
+    document.getElementById('btnAdd').classList.add('vis');
+  } else {
+    document.getElementById('btnAdd').classList.remove('vis');
+  }
+}
+
+function irEnt(id, ico, nom){
+  entAtual=id;
+  pilha.push(pagAtual); pagAtual='entidade';
+  document.getElementById('ent-ico').textContent=ico;
+  document.getElementById('ent-nom').textContent=nom;
+  renderCantigas(id);
+  mostrar('p-entidade', ico+' '+nom);
+  document.getElementById('btnAdd').classList.add('vis');
+}
+
+function irSub(sec, key, ico, nom){
+  subAtual={sec:sec, key:key, ico:ico, nom:nom};
+  pilha.push(pagAtual); pagAtual='sub';
+  document.getElementById('sub-ico').textContent=ico;
+  document.getElementById('sub-nom').textContent=nom;
+  renderSub(sec+'-'+key);
+  mostrar('p-sub', ico+' '+nom);
+  document.getElementById('btnAdd').classList.add('vis');
+}
+
+function voltar(){
+  if(!pilha.length) return;
+  var ant=pilha.pop();
+  pagAtual=ant;
+  document.getElementById('btnAdd').classList.remove('vis');
+  if(ant==='entidade') document.getElementById('btnAdd').classList.add('vis');
+  if(ant==='sub') document.getElementById('btnAdd').classList.add('vis');
+  mostrar('p-'+ant, ant==='home'?'Cantinho da Vovó Catarina':null);
+  if(ant==='home'||ant==='cantigas'||ant==='defumacoes'||ant==='oracoes'||ant==='ervas'){
+    entAtual=null; subAtual=null;
+  }
+}
+
+function mostrar(id, tit){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active');});
+  var el=document.getElementById(id);
+  if(el) el.classList.add('active');
+  if(tit) document.getElementById('topTit').textContent=tit;
+  var home=id==='p-home';
+  var bb=document.getElementById('btnBack');
+  bb.style.display=home?'none':'flex';
+  window.scrollTo(0,0);
+}
+
+// ── CANTIGAS ──
+function renderCantigas(id){
+  var lista=document.getElementById('ent-lista');
+  lista.innerHTML='';
+  var origs=CANT_ORIG[id]||[];
+  var users=CANT_USER[id]||[];
+  if(!origs.length&&!users.length){
+    lista.innerHTML='<div class="empty">Nenhuma cantiga.<br>Toque em ＋ para adicionar.</div>';
+    return;
+  }
+  origs.forEach(function(txt,i){ lista.appendChild(mkCant(txt,'orig',i,null)); });
+  users.forEach(function(u){ lista.appendChild(mkCant(u.cantiga,'user',u.index,u)); });
+}
+
+function mkCant(txt,tipo,idx,ud){
+  var d=document.createElement('div'); d.className='cant-card';
+  var top=document.createElement('div'); top.className='cant-top';
+  var badge=document.createElement('em');
+  badge.className=tipo==='orig'?'badge-o':'badge-u';
+  badge.textContent=tipo==='orig'?'original':'adicionada';
+  var acts=document.createElement('div'); acts.className='item-acts';
+  var bE=document.createElement('button'); bE.className='btn-sm'; bE.textContent='✏️';
+  bE.onclick=function(e){e.stopPropagation();editCant(tipo,idx,txt,d,ud);};
+  var bD=document.createElement('button'); bD.className='btn-sm'; bD.textContent='🗑';
+  bD.onclick=function(e){e.stopPropagation();pedirDel('cantiga',tipo,idx,d,ud);};
+  acts.appendChild(bE); acts.appendChild(bD);
+  top.appendChild(badge); top.appendChild(acts);
+  var prev=document.createElement('p'); prev.className='cant-prev'; prev.textContent=txt;
+  d.appendChild(top); d.appendChild(prev);
+  d.addEventListener('click',function(){abrirViewer(txt,entAtual,tipo,idx,d,ud);});
+  return d;
+}
+
+// ── SUB-SEÇÃO GENÉRICA ──
+function renderSub(chave){
+  var lista=document.getElementById('sub-lista');
+  lista.innerHTML='';
+  var arr=ITEMS[chave]||[];
+  if(!arr.length){
+    lista.innerHTML='<div class="empty">Nenhum conteúdo ainda.<br>Toque em ＋ para adicionar.</div>';
+    return;
+  }
+  arr.forEach(function(it,i){ lista.appendChild(mkItem(it,i,chave)); });
+}
+
+function mkItem(it,i,chave){
+  var d=document.createElement('div'); d.className='item';
+  var top=document.createElement('div'); top.className='item-top';
+  var tit=document.createElement('div'); tit.className='item-title'; tit.textContent=it.titulo||'';
+  var acts=document.createElement('div'); acts.className='item-acts';
+  var bE=document.createElement('button'); bE.className='btn-sm'; bE.textContent='✏️';
+  bE.onclick=function(e){e.stopPropagation();editItem(i,it,chave);};
+  var bD=document.createElement('button'); bD.className='btn-sm'; bD.textContent='🗑';
+  bD.onclick=function(e){e.stopPropagation();pedirDel('item',null,i,d,null,chave);};
+  acts.appendChild(bE); acts.appendChild(bD);
+  top.appendChild(tit); top.appendChild(acts);
+  var body=document.createElement('div'); body.className='item-body'; body.textContent=it.texto||'';
+  d.appendChild(top); d.appendChild(body);
+  d.addEventListener('click',function(){
+    body.classList.toggle('full');
+  });
+  return d;
+}
+
+// ── VIEWER CANTIGA ──
+function abrirViewer(txt,ent,tipo,idx,card,ud){
+  var e=ENT[ent];
+  document.getElementById('v-tit').textContent=e.ico+' '+e.nom;
+  document.getElementById('v-txt').textContent=txt;
+  var acts=document.getElementById('v-acts');
+  acts.innerHTML='';
+  var bE=document.createElement('button'); bE.className='bp'; bE.textContent='✏️ Editar';
+  bE.onclick=function(){fecharViewer();editCant(tipo,idx,txt,card,ud);};
+  var bD=document.createElement('button'); bD.className='bd'; bD.style.flex='0'; bD.style.minWidth='100px'; bD.textContent='🗑 Excluir';
+  bD.onclick=function(){fecharViewer();pedirDel('cantiga',tipo,idx,card,ud);};
+  acts.appendChild(bE); acts.appendChild(bD);
+  document.getElementById('viewer').classList.add('open');
+  document.getElementById('btnAdd').classList.remove('vis');
+}
+function fecharViewer(){
+  document.getElementById('viewer').classList.remove('open');
+  if(pagAtual==='entidade'||pagAtual==='sub') document.getElementById('btnAdd').classList.add('vis');
+}
+
+// ── ADD ──
+function abrirAdd(){
+  if(pagAtual==='entidade'){
+    modoAdd='cantiga'; modoEdit=false;
+    document.getElementById('mCantTit').textContent='✦ Adicionar Cantiga';
+    document.getElementById('mCantEnt').disabled=false;
+    if(entAtual) document.getElementById('mCantEnt').value=entAtual;
+    document.getElementById('mCantTxt').value='';
+    document.getElementById('mCantMsg').textContent='';
+    document.getElementById('mCantBtn').disabled=false;
+    document.getElementById('mCantBtn').textContent='Salvar ✦';
+    document.getElementById('mCant').classList.add('open');
+  } else if(pagAtual==='sub'){
+    modoAdd='item'; modoEdit=false; editIdx_=-1;
+    document.getElementById('mItemTit').textContent='✦ Adicionar';
+    document.getElementById('mItemTitulo').value='';
+    document.getElementById('mItemTxt').value='';
+    document.getElementById('mItemMsg').textContent='';
+    document.getElementById('mItemBtn').disabled=false;
+    document.getElementById('mItemBtn').textContent='Salvar ✦';
+    document.getElementById('mItem').classList.add('open');
+  } else if(pagAtual==='calendario'){
+    modoAdd='item'; modoEdit=false; editIdx_=-1;
+    document.getElementById('mItemTit').textContent='✦ Adicionar';
+    document.getElementById('mItemTitulo').value='';
+    document.getElementById('mItemTxt').value='';
+    document.getElementById('mItemMsg').textContent='';
+    document.getElementById('mItemBtn').disabled=false;
+    document.getElementById('mItemBtn').textContent='Salvar ✦';
+    document.getElementById('mItem').classList.add('open');
+    document.getElementById('btnAdd').classList.add('vis');
+  }
+}
+
+// ── EDITAR CANTIGA ──
+var modoEdit=false,editTipo_=null,editIdx_=-1,editCard_=null,editUD_=null,editChave_=null;
+
+function editCant(tipo,idx,txt,card,ud){
+  modoEdit=true; modoAdd='cantiga';
+  editTipo_=tipo; editIdx_=idx; editCard_=card; editUD_=ud;
+  document.getElementById('mCantTit').textContent='✏️ Editar Cantiga';
+  document.getElementById('mCantEnt').disabled=true;
+  document.getElementById('mCantTxt').value=txt;
+  document.getElementById('mCantMsg').textContent='';
+  document.getElementById('mCantBtn').disabled=false;
+  document.getElementById('mCantBtn').textContent='Salvar ✦';
+  document.getElementById('mCant').classList.add('open');
+}
+
+function salvarCantiga(){
+  var txt=document.getElementById('mCantTxt').value.trim();
+  var msg=document.getElementById('mCantMsg');
+  var btn=document.getElementById('mCantBtn');
+  if(!txt){msg.textContent='Digite a letra.';msg.className='mmsg er';return;}
+  btn.disabled=true; btn.textContent='Salvando…'; msg.textContent='';
+
+  if(modoEdit){
+    if(editTipo_==='orig'){
+      CANT_ORIG[entAtual][editIdx_]=txt;
+    } else {
+      chamarSheet({action:'edit',row:editIdx_,cantiga:txt},null,null);
+      if(editUD_) editUD_.cantiga=txt;
+    }
+    if(editCard_) editCard_.querySelector('.cant-prev').textContent=txt;
+    msg.textContent='✓ Atualizada!'; msg.className='mmsg ok';
+    btn.textContent='Salvo ✓';
+    setTimeout(fecharMCant,1300);
+  } else {
+    var ent=document.getElementById('mCantEnt').value;
+    chamarSheet({action:'add',entidade:ent,cantiga:txt},function(){
+      if(!CANT_USER[ent]) CANT_USER[ent]=[];
+      var fi='_'+Date.now();
+      var nu={cantiga:txt,index:fi};
+      CANT_USER[ent].push(nu);
+      if(ent===entAtual){
+        var lista=document.getElementById('ent-lista');
+        var empty=lista.querySelector('.empty');
+        if(empty) empty.remove();
+        lista.appendChild(mkCant(txt,'user',fi,nu));
+      }
+      msg.textContent='✓ Cantiga salva!'; msg.className='mmsg ok';
+      btn.textContent='Salvo ✓';
+      setTimeout(fecharMCant,1300);
+    },function(){
+      msg.textContent='Erro de conexão.'; msg.className='mmsg er';
+      btn.disabled=false; btn.textContent='Salvar ✦';
+    });
+  }
+}
+
+function fecharMCant(){document.getElementById('mCant').classList.remove('open');}
+
+// ── EDITAR ITEM ──
+function editItem(i,it,chave){
+  modoEdit=true; modoAdd='item'; editIdx_=i; editChave_=chave;
+  document.getElementById('mItemTit').textContent='✏️ Editar';
+  document.getElementById('mItemTitulo').value=it.titulo||'';
+  document.getElementById('mItemTxt').value=it.texto||'';
+  document.getElementById('mItemMsg').textContent='';
+  document.getElementById('mItemBtn').disabled=false;
+  document.getElementById('mItemBtn').textContent='Salvar ✦';
+  document.getElementById('mItem').classList.add('open');
+}
+
+function salvarItem(){
+  var tit=document.getElementById('mItemTitulo').value.trim();
+  var txt=document.getElementById('mItemTxt').value.trim();
+  var msg=document.getElementById('mItemMsg');
+  var btn=document.getElementById('mItemBtn');
+  if(!txt){msg.textContent='Digite o conteúdo.';msg.className='mmsg er';return;}
+  btn.disabled=true; btn.textContent='Salvando…';
+
+  var chave=subAtual?(subAtual.sec+'-'+subAtual.key):(pagAtual==='preceitos'?'prec':'cal');
+  if(!ITEMS[chave]) ITEMS[chave]=[];
+
+  if(modoEdit&&editIdx_>=0){
+    ITEMS[chave][editIdx_]={titulo:tit,texto:txt};
+  } else {
+    ITEMS[chave].push({titulo:tit,texto:txt});
+  }
+
+  if(pagAtual==='sub') renderSub(chave);
+
+  else if(pagAtual==='calendario') renderStatico('lista-cal','cal');
+
+  msg.textContent='✓ Salvo!'; msg.className='mmsg ok';
+  btn.textContent='Salvo ✓';
+  setTimeout(fecharMItem,1200);
+}
+
+function fecharMItem(){document.getElementById('mItem').classList.remove('open');}
+
+function renderStatico(listId,chave){
+  var lista=document.getElementById(listId);
+  lista.innerHTML='';
+  var arr=ITEMS[chave]||[];
+  if(!arr.length){lista.innerHTML='<div class="empty">Nenhum conteúdo ainda.<br>Toque em ＋ para adicionar.</div>';return;}
+  arr.forEach(function(it,i){lista.appendChild(mkItem(it,i,chave));});
+}
+
+// ── EXCLUIR ──
+var delModo_=null,delTipo_=null,delIdx2_=-1,delCard_=null,delUD_=null,delChave_=null;
+
+function pedirDel(modo,tipo,idx,card,ud,chave){
+  delModo_=modo; delTipo_=tipo; delIdx2_=idx; delCard_=card; delUD_=ud; delChave_=chave;
+  document.getElementById('mDelMsg').textContent='';
+  document.getElementById('mDelBtn').disabled=false;
+  document.getElementById('mDelBtn').textContent='Excluir';
+  document.getElementById('mDel').classList.add('open');
+}
+
+function confirmarDel(){
+  var btn=document.getElementById('mDelBtn');
+  btn.disabled=true; btn.textContent='Excluindo…';
+
+  if(delModo_==='cantiga'){
+    if(delTipo_==='user'){
+      chamarSheet({action:'delete',row:delIdx2_},function(){
+        rmCard(delCard_);
+        if(CANT_USER[entAtual]) CANT_USER[entAtual]=CANT_USER[entAtual].filter(function(u){return u.index!==delIdx2_;});
+        fecharMDel();
+      },function(){
+        document.getElementById('mDelMsg').textContent='Erro ao excluir.';
+        document.getElementById('mDelMsg').className='mmsg er';
+        btn.disabled=false; btn.textContent='Excluir';
+      });
+    } else {
+      if(CANT_ORIG[entAtual]) CANT_ORIG[entAtual].splice(delIdx2_,1);
+      rmCard(delCard_); fecharMDel();
+    }
+  } else {
+    var chave=delChave_||'';
+    if(ITEMS[chave]) ITEMS[chave].splice(delIdx2_,1);
+    if(pagAtual==='sub') renderSub(chave);
+  
+    else if(pagAtual==='calendario') renderStatico('lista-cal','cal');
+    rmCard(delCard_); fecharMDel();
+  }
+}
+
+function rmCard(card){
+  if(!card) return;
+  card.style.transition='opacity .3s,max-height .3s,margin .3s';
+  card.style.opacity='0'; card.style.maxHeight='0';
+  card.style.overflow='hidden'; card.style.marginBottom='0';
+  setTimeout(function(){if(card.parentNode)card.remove();},350);
+}
+function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
+
+// preceitos e calendário mostram o botão +
+// (já tratado dentro da função ir abaixo)
+
+// ── SHEETS ──
+function chamarSheet(payload,onOk,onErr){
+  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
+  .then(function(){if(onOk)onOk();})
+  .catch(function(e){if(onErr)onErr(e);});
+}
+
+function carregarSalvas(){
+  fetch(SHEET).then(function(r){return r.json();})
+  .then(function(rows){
+    rows.forEach(function(row){
+      if(!row.entidade||!row.cantiga) return;
+      if(!CANT_USER[row.entidade]) CANT_USER[row.entidade]=[];
+      CANT_USER[row.entidade].push({cantiga:row.cantiga,index:row.index});
+    });
+  }).catch(function(){});
+}
+carregarSalvas();
+</script>
+
+
+</body></html>
