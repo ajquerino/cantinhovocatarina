@@ -54,6 +54,8 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 .c-erva::before{background:#2ecc71;}
 .c-cale::before{background:#3498db;}
 .c-ofer::before{background:#e91e8c;}
+.c-itan::before{background:#6a1f8a;}
+.c-itan::before{background:#8e44ad;}
 
 /* SUB-CARD menor */
 .scard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:16px 8px 12px;text-align:center;cursor:pointer;touch-action:manipulation;position:relative;overflow:hidden;}
@@ -86,11 +88,11 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 .btn-sm:active{background:var(--bg3);}
 
 /* CANTIGA card */
-.cant-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px 14px 20px;margin-bottom:10px;position:relative;overflow:hidden;cursor:pointer;touch-action:manipulation;}
+.cant-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px 14px 20px;margin-bottom:10px;position:relative;overflow:hidden;}
 .cant-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);opacity:.6;}
-.cant-card:active{background:var(--bg3);}
+
 .cant-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px;}
-.cant-prev{font-size:.88rem;line-height:1.7;color:var(--text);white-space:pre-wrap;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.cant-prev{font-size:.92rem;line-height:1.85;color:var(--text);white-space:pre-wrap;}
 .badge-o{font-size:.6rem;background:#0a2040;color:var(--accent);border:1px solid var(--border);border-radius:8px;padding:2px 7px;white-space:nowrap;}
 .badge-u{font-size:.6rem;background:#0a2a1a;color:#5ec88a;border:1px solid #1a5a3a;border-radius:8px;padding:2px 7px;white-space:nowrap;}
 
@@ -161,6 +163,8 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
     <div class="card c-erva" onclick="ir('ervas','🌱 Ervas e Plantas')"><span class="ico">🌱</span><span class="tit">Ervas e Plantas</span><span class="sub">Usos e propriedades</span></div>
     <div class="card c-cale" onclick="ir('calendario','📅 Calendário')"><span class="ico">📅</span><span class="tit">Calendário</span><span class="sub">Dias e festas</span></div>
     <div class="card c-ofer" onclick="ir('oferendas','🌸 Oferendas')"><span class="ico">🌸</span><span class="tit">Oferendas</span><span class="sub">Por Orixá e entidade</span></div>
+    <div class="card c-itan" onclick="ir('itan','📖 Itan — Mitos')"><span class="ico">📖</span><span class="tit">Itan — Mitos</span><span class="sub">Histórias dos Orixás</span></div>
+    <div class="card c-itan" onclick="ir('itan','📖 Itan — Mitos dos Orixás')"><span class="ico">📖</span><span class="tit">Itan</span><span class="sub">Mitos e histórias sagradas</span></div>
   </div>
 </div>
 
@@ -383,6 +387,58 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
   </div>
 </div>
 
+
+<!-- ITAN - grade -->
+<div class="page" id="p-itan">
+  <div class="ph"><div class="ph-ico">📖</div><div class="ph-tit">Itan — Mitos dos Orixás</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub('itan','oxala','🕊️','Itan de Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub('itan','ogum','⚔️','Itan de Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub('itan','oxossi','🌿','Itan de Oxóssi')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub('itan','xango','⚡','Itan de Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub('itan','oxum','💛','Itan de Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub('itan','iemanja','🌊','Itan de Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub('itan','iansa','🌪️','Itan de Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub('itan','nana','🪷','Itan de Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub('itan','omolu','🌾','Itan de Omolu')"><span class="ico">🌾</span><span class="tit">Omolu / Obaluaê</span></div>
+    <div class="scard" onclick="irSub('itan','oxumare','🌈','Itan de Oxumaré')"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub('itan','ossanha','🌱','Itan de Ossanha')"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub('itan','oba','🔴','Itan de Obá')"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub('itan','ewa','🟡','Itan de Ewá')"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub('itan','logun','🎯','Itan de Logunedé')"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub('itan','exu','🔱','Itan de Exu')"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub('itan','pretos','📿','Itan dos Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub('itan','caboclos','🏹','Itan dos Caboclos')"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+    <div class="scard" onclick="irSub('itan','pombagira','🌹','Itan de Pombagira')"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+  </div>
+</div>
+
+
+<!-- ITAN - grade -->
+<div class="page" id="p-itan">
+  <div class="ph"><div class="ph-ico">📖</div><div class="ph-tit">Itan — Mitos dos Orixás</div></div>
+  <div class="grid3">
+    <div class="scard" onclick="irSub('itan','oxala','🕊️','Itan de Oxalá')"><span class="ico">🕊️</span><span class="tit">Oxalá</span></div>
+    <div class="scard" onclick="irSub('itan','ogum','⚔️','Itan de Ogum')"><span class="ico">⚔️</span><span class="tit">Ogum</span></div>
+    <div class="scard" onclick="irSub('itan','oxossi','🌿','Itan de Oxóssi')"><span class="ico">🌿</span><span class="tit">Oxóssi</span></div>
+    <div class="scard" onclick="irSub('itan','xango','⚡','Itan de Xangô')"><span class="ico">⚡</span><span class="tit">Xangô</span></div>
+    <div class="scard" onclick="irSub('itan','oxum','💛','Itan de Oxum')"><span class="ico">💛</span><span class="tit">Oxum</span></div>
+    <div class="scard" onclick="irSub('itan','iemanja','🌊','Itan de Iemanjá')"><span class="ico">🌊</span><span class="tit">Iemanjá</span></div>
+    <div class="scard" onclick="irSub('itan','iansa','🌪️','Itan de Iansã')"><span class="ico">🌪️</span><span class="tit">Iansã</span></div>
+    <div class="scard" onclick="irSub('itan','nana','🪷','Itan de Nanã')"><span class="ico">🪷</span><span class="tit">Nanã</span></div>
+    <div class="scard" onclick="irSub('itan','omolu','🌾','Itan de Omolu')"><span class="ico">🌾</span><span class="tit">Omolu</span></div>
+    <div class="scard" onclick="irSub('itan','oxumare','🌈','Itan de Oxumaré')"><span class="ico">🌈</span><span class="tit">Oxumaré</span></div>
+    <div class="scard" onclick="irSub('itan','ossanha','🌱','Itan de Ossanha')"><span class="ico">🌱</span><span class="tit">Ossanha</span></div>
+    <div class="scard" onclick="irSub('itan','oba','🔴','Itan de Obá')"><span class="ico">🔴</span><span class="tit">Obá</span></div>
+    <div class="scard" onclick="irSub('itan','ewa','🟡','Itan de Ewá')"><span class="ico">🟡</span><span class="tit">Ewá</span></div>
+    <div class="scard" onclick="irSub('itan','logun','🎯','Itan de Logunedé')"><span class="ico">🎯</span><span class="tit">Logunedé</span></div>
+    <div class="scard" onclick="irSub('itan','exu','🔱','Itan de Exu')"><span class="ico">🔱</span><span class="tit">Exu</span></div>
+    <div class="scard" onclick="irSub('itan','pombagira','🌹','Itan de Pombagira')"><span class="ico">🌹</span><span class="tit">Pombagira</span></div>
+    <div class="scard" onclick="irSub('itan','pretos','📿','Itan dos Pretos Velhos')"><span class="ico">📿</span><span class="tit">Pretos Velhos</span></div>
+    <div class="scard" onclick="irSub('itan','caboclos','🏹','Itan dos Caboclos')"><span class="ico">🏹</span><span class="tit">Caboclos</span></div>
+  </div>
+</div>
+
 <!-- VIEWER CANTIGA -->
 <div class="viewer" id="viewer">
   <div class="v-hdr">
@@ -589,7 +645,7 @@ function mkCant(txt,tipo,idx,ud){
   top.appendChild(badge); top.appendChild(acts);
   var prev=document.createElement('p'); prev.className='cant-prev'; prev.textContent=txt;
   d.appendChild(top); d.appendChild(prev);
-  d.addEventListener('click',function(){abrirViewer(txt,entAtual,tipo,idx,d,ud);});
+  // clique no card desativado — letra já aparece completa
   return d;
 }
 
