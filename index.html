@@ -893,13 +893,8 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{
-    method:'POST',
-    headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify(payload)
-  })
-  .then(function(r){return r.json();})
-  .then(function(d){ if(onOk)onOk(d); })
+  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
+  .then(function(){ if(onOk)onOk(); })
   .catch(function(e){ if(onErr)onErr(e); });
 }
 
@@ -2091,13 +2086,8 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{
-    method:'POST',
-    headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify(payload)
-  })
-  .then(function(r){return r.json();})
-  .then(function(d){ if(onOk)onOk(d); })
+  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
+  .then(function(){ if(onOk)onOk(); })
   .catch(function(e){ if(onErr)onErr(e); });
 }
 
@@ -2808,13 +2798,8 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{
-    method:'POST',
-    headers:{'Content-Type':'text/plain;charset=utf-8'},
-    body:JSON.stringify(payload)
-  })
-  .then(function(r){return r.json();})
-  .then(function(d){ if(onOk)onOk(d); })
+  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
+  .then(function(){ if(onOk)onOk(); })
   .catch(function(e){ if(onErr)onErr(e); });
 }
 
