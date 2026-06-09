@@ -487,7 +487,7 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbyOY9lkYsAX8zjPTQ-J7OFRo1VuasgxemurM6VF8W8wJ8kpC2tsv-L0GBiUys6mvrbC/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbxF77pzXz5gQlfuebyKWQPlwVUoJlkRW_7E_5jB_UDlm2aeOHjns4i9VUsgwwrGmtUo/exec';
 
 // ── DADOS ──
 var ENT={
@@ -893,44 +893,14 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  // Usa iframe invisível para contornar CORS do Google Apps Script
-  var id='_gf'+Date.now();
-  var iframe=document.createElement('iframe');
-  iframe.name=id; iframe.style.display='none';
-  document.body.appendChild(iframe);
-
-  var form=document.createElement('form');
-  form.method='POST';
-  form.action=SHEET;
-  form.target=id;
-  form.style.display='none';
-
-  var inp=document.createElement('input');
-  inp.type='hidden';
-  inp.name='payload';
-  inp.value=JSON.stringify(payload);
-  form.appendChild(inp);
-
-  // Também envia como campo individual para compatibilidade
-  var inp2=document.createElement('input');
-  inp2.type='hidden';
-  inp2.name='data';
-  inp2.value=JSON.stringify(payload);
-  form.appendChild(inp2);
-
-  document.body.appendChild(form);
-
-  iframe.onload=function(){
-    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
-    if(onOk) onOk();
-  };
-
-  setTimeout(function(){
-    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
-    if(onOk) onOk(); // considera enviado mesmo sem confirmação
-  }, 3000);
-
-  form.submit();
+  // Usa GET com parâmetros — Google Apps Script aceita GET de qualquer origem
+  var params='?data='+encodeURIComponent(JSON.stringify(payload));
+  var img=new Image();
+  img.onload=function(){ if(onOk)onOk(); };
+  img.onerror=function(){ if(onOk)onOk(); }; // mesmo com erro, considera enviado
+  img.src=SHEET+params;
+  // fallback após 3s
+  setTimeout(function(){ if(onOk)onOk(); },3000);
 }
 
 function carregarAba(aba, onOk){
@@ -1254,7 +1224,7 @@ carregarSalvas();
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbyOY9lkYsAX8zjPTQ-J7OFRo1VuasgxemurM6VF8W8wJ8kpC2tsv-L0GBiUys6mvrbC/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbxF77pzXz5gQlfuebyKWQPlwVUoJlkRW_7E_5jB_UDlm2aeOHjns4i9VUsgwwrGmtUo/exec';
 
 // ── DADOS ──
 var ENT={
@@ -1735,7 +1705,7 @@ body{font-family:'IM Fell English',Georgia,serif;background:var(--bg);color:var(
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbyOY9lkYsAX8zjPTQ-J7OFRo1VuasgxemurM6VF8W8wJ8kpC2tsv-L0GBiUys6mvrbC/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbxF77pzXz5gQlfuebyKWQPlwVUoJlkRW_7E_5jB_UDlm2aeOHjns4i9VUsgwwrGmtUo/exec';
 
 // ── DADOS ──
 var ENT={
@@ -2121,44 +2091,14 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  // Usa iframe invisível para contornar CORS do Google Apps Script
-  var id='_gf'+Date.now();
-  var iframe=document.createElement('iframe');
-  iframe.name=id; iframe.style.display='none';
-  document.body.appendChild(iframe);
-
-  var form=document.createElement('form');
-  form.method='POST';
-  form.action=SHEET;
-  form.target=id;
-  form.style.display='none';
-
-  var inp=document.createElement('input');
-  inp.type='hidden';
-  inp.name='payload';
-  inp.value=JSON.stringify(payload);
-  form.appendChild(inp);
-
-  // Também envia como campo individual para compatibilidade
-  var inp2=document.createElement('input');
-  inp2.type='hidden';
-  inp2.name='data';
-  inp2.value=JSON.stringify(payload);
-  form.appendChild(inp2);
-
-  document.body.appendChild(form);
-
-  iframe.onload=function(){
-    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
-    if(onOk) onOk();
-  };
-
-  setTimeout(function(){
-    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
-    if(onOk) onOk(); // considera enviado mesmo sem confirmação
-  }, 3000);
-
-  form.submit();
+  // Usa GET com parâmetros — Google Apps Script aceita GET de qualquer origem
+  var params='?data='+encodeURIComponent(JSON.stringify(payload));
+  var img=new Image();
+  img.onload=function(){ if(onOk)onOk(); };
+  img.onerror=function(){ if(onOk)onOk(); }; // mesmo com erro, considera enviado
+  img.src=SHEET+params;
+  // fallback após 3s
+  setTimeout(function(){ if(onOk)onOk(); },3000);
 }
 
 function carregarAba(aba, onOk){
@@ -2482,7 +2422,7 @@ carregarSalvas();
 </div>
 
 <script>
-var SHEET='https://script.google.com/macros/s/AKfycbyOY9lkYsAX8zjPTQ-J7OFRo1VuasgxemurM6VF8W8wJ8kpC2tsv-L0GBiUys6mvrbC/exec';
+var SHEET='https://script.google.com/macros/s/AKfycbxF77pzXz5gQlfuebyKWQPlwVUoJlkRW_7E_5jB_UDlm2aeOHjns4i9VUsgwwrGmtUo/exec';
 
 // ── DADOS ──
 var ENT={
@@ -2868,44 +2808,14 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  // Usa iframe invisível para contornar CORS do Google Apps Script
-  var id='_gf'+Date.now();
-  var iframe=document.createElement('iframe');
-  iframe.name=id; iframe.style.display='none';
-  document.body.appendChild(iframe);
-
-  var form=document.createElement('form');
-  form.method='POST';
-  form.action=SHEET;
-  form.target=id;
-  form.style.display='none';
-
-  var inp=document.createElement('input');
-  inp.type='hidden';
-  inp.name='payload';
-  inp.value=JSON.stringify(payload);
-  form.appendChild(inp);
-
-  // Também envia como campo individual para compatibilidade
-  var inp2=document.createElement('input');
-  inp2.type='hidden';
-  inp2.name='data';
-  inp2.value=JSON.stringify(payload);
-  form.appendChild(inp2);
-
-  document.body.appendChild(form);
-
-  iframe.onload=function(){
-    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
-    if(onOk) onOk();
-  };
-
-  setTimeout(function(){
-    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
-    if(onOk) onOk(); // considera enviado mesmo sem confirmação
-  }, 3000);
-
-  form.submit();
+  // Usa GET com parâmetros — Google Apps Script aceita GET de qualquer origem
+  var params='?data='+encodeURIComponent(JSON.stringify(payload));
+  var img=new Image();
+  img.onload=function(){ if(onOk)onOk(); };
+  img.onerror=function(){ if(onOk)onOk(); }; // mesmo com erro, considera enviado
+  img.src=SHEET+params;
+  // fallback após 3s
+  setTimeout(function(){ if(onOk)onOk(); },3000);
 }
 
 function carregarAba(aba, onOk){
