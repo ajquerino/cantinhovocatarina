@@ -893,9 +893,44 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
-  .then(function(){ if(onOk)onOk(); })
-  .catch(function(e){ if(onErr)onErr(e); });
+  // Usa iframe invisível para contornar CORS do Google Apps Script
+  var id='_gf'+Date.now();
+  var iframe=document.createElement('iframe');
+  iframe.name=id; iframe.style.display='none';
+  document.body.appendChild(iframe);
+
+  var form=document.createElement('form');
+  form.method='POST';
+  form.action=SHEET;
+  form.target=id;
+  form.style.display='none';
+
+  var inp=document.createElement('input');
+  inp.type='hidden';
+  inp.name='payload';
+  inp.value=JSON.stringify(payload);
+  form.appendChild(inp);
+
+  // Também envia como campo individual para compatibilidade
+  var inp2=document.createElement('input');
+  inp2.type='hidden';
+  inp2.name='data';
+  inp2.value=JSON.stringify(payload);
+  form.appendChild(inp2);
+
+  document.body.appendChild(form);
+
+  iframe.onload=function(){
+    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
+    if(onOk) onOk();
+  };
+
+  setTimeout(function(){
+    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
+    if(onOk) onOk(); // considera enviado mesmo sem confirmação
+  }, 3000);
+
+  form.submit();
 }
 
 function carregarAba(aba, onOk){
@@ -2086,9 +2121,44 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
-  .then(function(){ if(onOk)onOk(); })
-  .catch(function(e){ if(onErr)onErr(e); });
+  // Usa iframe invisível para contornar CORS do Google Apps Script
+  var id='_gf'+Date.now();
+  var iframe=document.createElement('iframe');
+  iframe.name=id; iframe.style.display='none';
+  document.body.appendChild(iframe);
+
+  var form=document.createElement('form');
+  form.method='POST';
+  form.action=SHEET;
+  form.target=id;
+  form.style.display='none';
+
+  var inp=document.createElement('input');
+  inp.type='hidden';
+  inp.name='payload';
+  inp.value=JSON.stringify(payload);
+  form.appendChild(inp);
+
+  // Também envia como campo individual para compatibilidade
+  var inp2=document.createElement('input');
+  inp2.type='hidden';
+  inp2.name='data';
+  inp2.value=JSON.stringify(payload);
+  form.appendChild(inp2);
+
+  document.body.appendChild(form);
+
+  iframe.onload=function(){
+    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
+    if(onOk) onOk();
+  };
+
+  setTimeout(function(){
+    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
+    if(onOk) onOk(); // considera enviado mesmo sem confirmação
+  }, 3000);
+
+  form.submit();
 }
 
 function carregarAba(aba, onOk){
@@ -2798,9 +2868,44 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
-  .then(function(){ if(onOk)onOk(); })
-  .catch(function(e){ if(onErr)onErr(e); });
+  // Usa iframe invisível para contornar CORS do Google Apps Script
+  var id='_gf'+Date.now();
+  var iframe=document.createElement('iframe');
+  iframe.name=id; iframe.style.display='none';
+  document.body.appendChild(iframe);
+
+  var form=document.createElement('form');
+  form.method='POST';
+  form.action=SHEET;
+  form.target=id;
+  form.style.display='none';
+
+  var inp=document.createElement('input');
+  inp.type='hidden';
+  inp.name='payload';
+  inp.value=JSON.stringify(payload);
+  form.appendChild(inp);
+
+  // Também envia como campo individual para compatibilidade
+  var inp2=document.createElement('input');
+  inp2.type='hidden';
+  inp2.name='data';
+  inp2.value=JSON.stringify(payload);
+  form.appendChild(inp2);
+
+  document.body.appendChild(form);
+
+  iframe.onload=function(){
+    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
+    if(onOk) onOk();
+  };
+
+  setTimeout(function(){
+    try{ document.body.removeChild(form); document.body.removeChild(iframe); }catch(e){}
+    if(onOk) onOk(); // considera enviado mesmo sem confirmação
+  }, 3000);
+
+  form.submit();
 }
 
 function carregarAba(aba, onOk){
