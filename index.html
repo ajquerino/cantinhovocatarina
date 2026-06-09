@@ -1,4 +1,4 @@
-]<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -893,9 +893,14 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
-  .then(function(){if(onOk)onOk();})
-  .catch(function(e){if(onErr)onErr(e);});
+  fetch(SHEET,{
+    method:'POST',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(payload)
+  })
+  .then(function(r){return r.json();})
+  .then(function(d){ if(onOk)onOk(d); })
+  .catch(function(e){ if(onErr)onErr(e); });
 }
 
 function carregarAba(aba, onOk){
@@ -2086,9 +2091,14 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
-  .then(function(){if(onOk)onOk();})
-  .catch(function(e){if(onErr)onErr(e);});
+  fetch(SHEET,{
+    method:'POST',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(payload)
+  })
+  .then(function(r){return r.json();})
+  .then(function(d){ if(onOk)onOk(d); })
+  .catch(function(e){ if(onErr)onErr(e); });
 }
 
 function carregarAba(aba, onOk){
@@ -2798,9 +2808,14 @@ function fecharMDel(){document.getElementById('mDel').classList.remove('open');}
 
 // ── SHEETS ──
 function chamarSheet(payload,onOk,onErr){
-  fetch(SHEET,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain'},body:JSON.stringify(payload)})
-  .then(function(){if(onOk)onOk();})
-  .catch(function(e){if(onErr)onErr(e);});
+  fetch(SHEET,{
+    method:'POST',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(payload)
+  })
+  .then(function(r){return r.json();})
+  .then(function(d){ if(onOk)onOk(d); })
+  .catch(function(e){ if(onErr)onErr(e); });
 }
 
 function carregarAba(aba, onOk){
